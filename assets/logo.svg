@@ -1,0 +1,14 @@
+<svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dhanyaa Medical Centre logo">
+  <defs>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a3d6e"/>
+      <stop offset="100%" stop-color="#1a6bb5"/>
+    </linearGradient>
+    <linearGradient id="lightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#4fc3f7"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#darkGrad)" d="M184,255 L184,431 L751,846 L751,756 L688,755 L689,707 L751,707 L751,636 L324,345 L466,249 L606,332 L741,250 L464,90 Z"/>
+  <path fill="url(#lightGrad)" d="M1350,255 L1065,91 L632,357 L632,410 L771,500 L774,433 L1064,251 L1209,346 L793,636 L793,708 L856,709 L855,755 L793,755 L793,846 L1351,432 Z"/>
+</svg>
