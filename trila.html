@@ -1,0 +1,271 @@
+<!-- Health Packages — clean pricing cards -->
+<section class="section-pad tint pkg-section">
+  <style>
+    .pkg-section .section-head { margin-bottom: 48px; }
+
+    .pkg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+    @media (max-width: 900px) {
+      .pkg-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    }
+
+    .pkg-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid rgba(10,61,110,0.08);
+      box-shadow: 0 2px 10px rgba(10,61,110,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform .25s ease, box-shadow .25s ease;
+      position: relative;
+    }
+    .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 18px 34px rgba(10,61,110,0.12); }
+
+    .pkg-card[data-accent="heart"]  .pkg-bar { background: linear-gradient(90deg,#0a3d6e,#1a6bb5); }
+    .pkg-card[data-accent="diabetic"] .pkg-bar { background: linear-gradient(90deg,#0B5E5E,#158f8f); }
+    .pkg-card[data-accent="full"]   .pkg-bar { background: linear-gradient(90deg,#A8433D,#c85c50); }
+    .pkg-bar { height: 6px; width: 100%; }
+
+    /* Middle package called out as the balanced/recommended pick */
+    .pkg-card.pkg-featured {
+      border-color: rgba(11,94,94,0.35);
+      box-shadow: 0 10px 30px rgba(11,94,94,0.14);
+      transform: translateY(-10px);
+    }
+    .pkg-card.pkg-featured:hover { transform: translateY(-16px); }
+    @media (max-width: 900px) {
+      .pkg-card.pkg-featured { transform: none; }
+      .pkg-card.pkg-featured:hover { transform: translateY(-6px); }
+    }
+
+    .pkg-badge {
+      position: absolute;
+      top: 18px; right: 18px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0B5E5E;
+      background: rgba(11,94,94,0.08);
+      padding: 5px 10px;
+      border-radius: 999px;
+    }
+
+    .pkg-body { padding: 30px 28px 28px; display: flex; flex-direction: column; flex: 1; }
+
+    .pkg-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6b7a8d;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .pkg-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.32rem;
+      color: #0a3d6e;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      min-height: 66px;
+    }
+
+    .pkg-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .pkg-currency {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1.1rem;
+      color: #0a3d6e;
+      opacity: 0.7;
+    }
+    .pkg-price {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 2.6rem;
+      color: #0a3d6e;
+      line-height: 1;
+    }
+    .pkg-price-note {
+      font-size: 0.82rem;
+      color: #8a96a3;
+      margin-bottom: 24px;
+    }
+
+    .pkg-divider { height: 1px; background: rgba(10,61,110,0.08); margin: 0 0 22px; }
+
+    .pkg-group { margin-bottom: 18px; }
+    .pkg-group-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #0B5E5E;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .pkg-list { list-style: none; padding: 0; margin: 0; }
+    .pkg-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.9rem;
+      color: #3d4a58;
+      line-height: 1.45;
+      margin-bottom: 9px;
+    }
+    .pkg-list li i {
+      color: #0B5E5E;
+      font-size: 0.78rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .pkg-cta {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+    .pkg-cta .btn-primary-pill,
+    .pkg-cta .btn-outline-pill {
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
+
+  <div class="container-xl">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow" style="justify-content:center;">Preventive checkups</p>
+      <h2>Health packages for every stage of prevention.</h2>
+    </div>
+
+    <div class="pkg-grid" data-aos="fade-up">
+
+      <!-- Package 1 -->
+      <div class="pkg-card" data-accent="heart">
+        <div class="pkg-bar"></div>
+        <div class="pkg-body">
+          <span class="pkg-tag">Foundational</span>
+          <h3 class="pkg-title">Basic Health Package</h3>
+          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">1,200</span></div>
+          <p class="pkg-price-note">One-time checkup</p>
+          <div class="pkg-divider"></div>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Blood Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> CBC — WBC, RBC, Hb, Platelet Count, PCV</li>
+              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine</li>
+              <li><i class="fa-solid fa-check"></i> RBS (Random Blood Sugar)</li>
+              <li><i class="fa-solid fa-check"></i> Total Cholesterol</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Cardiac Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> ECG</li>
+              <li><i class="fa-solid fa-check"></i> Echo Screening</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group" style="margin-bottom:0;">
+            <p class="pkg-group-label">Consultation</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> Doctor Consultation Included</li>
+            </ul>
+          </div>
+
+          <div class="pkg-cta">
+            <button class="btn-primary-pill js-open-appointment" type="button">Book This Package</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 2 — featured -->
+      <div class="pkg-card pkg-featured" data-accent="diabetic">
+        <span class="pkg-badge">Most chosen</span>
+        <div class="pkg-bar"></div>
+        <div class="pkg-body">
+          <span class="pkg-tag">Comprehensive</span>
+          <h3 class="pkg-title">Complete Heart &amp; Diabetic Panel</h3>
+          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">2,300</span></div>
+          <p class="pkg-price-note">One-time checkup</p>
+          <div class="pkg-divider"></div>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Blood Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> CBC (Complete Blood Count)</li>
+              <li><i class="fa-solid fa-check"></i> Glucose Profile — FBS &amp; PPBS</li>
+              <li><i class="fa-solid fa-check"></i> Lipid Profile — Cholesterol, HDL, LDL, VLDL</li>
+              <li><i class="fa-solid fa-check"></i> TSH (Thyroid Stimulating Hormone)</li>
+              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine, Uric Acid</li>
+              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group" style="margin-bottom:0;">
+            <p class="pkg-group-label">Cardiac Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> ECG</li>
+              <li><i class="fa-solid fa-check"></i> Complete Diagnostic Echocardiogram</li>
+            </ul>
+          </div>
+
+          <div class="pkg-cta">
+            <button class="btn-primary-pill js-open-appointment" type="button">Book This Package</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="pkg-card" data-accent="full">
+        <div class="pkg-bar"></div>
+        <div class="pkg-body">
+          <span class="pkg-tag">Executive</span>
+          <h3 class="pkg-title">Executive Health Check-Up</h3>
+          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">3,500</span></div>
+          <p class="pkg-price-note">One-time checkup</p>
+          <div class="pkg-divider"></div>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Blood Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> Liver Function Test — Total Panel (Bilirubin, ALT, Albumin, GGT, PT Ratio, APTT)</li>
+              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group" style="margin-bottom:0;">
+            <p class="pkg-group-label">Cardiac Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> ECG</li>
+              <li><i class="fa-solid fa-check"></i> ECHO</li>
+              <li><i class="fa-solid fa-check"></i> TMT (Treadmill Stress Test)</li>
+            </ul>
+          </div>
+
+          <div class="pkg-cta">
+            <button class="btn-primary-pill js-open-appointment" type="button">Book This Package</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center" style="margin-top:32px; font-size:0.85rem; color:#8a96a3;" data-aos="fade-up">
+      Prices are in Indian Rupees (&#8377;) and subject to change. Call the centre to confirm current rates.
+    </p>
+  </div>
+</section>
