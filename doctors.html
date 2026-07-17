@@ -30,6 +30,107 @@
   "url": "https://www.dhanyaamedicalcentre.com/doctors.html"
 }
 </script>
+<style>
+    /* ---------- Doctor's message: two-column layout, video docked right ---------- */
+.doctor-video-layout{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:56px;
+  flex-wrap:wrap;
+}
+
+.doctor-info-panel{
+  flex:1 1 420px;
+  max-width:480px;
+}
+.doctor-quote-icon{
+  font-size:1.6rem;
+  color:var(--blue);
+  opacity:0.35;
+  margin-bottom:14px;
+  display:block;
+}
+.doctor-quote{
+  font-family:var(--font-serif, inherit);
+  font-size:1.4rem;
+  line-height:1.45;
+  color:var(--ink);
+  margin-bottom:28px;
+}
+.doctor-highlights{
+  list-style:none;
+  margin:0 0 32px;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.doctor-highlights li{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  font-size:0.95rem;
+  color:var(--ink-soft);
+}
+.doctor-highlights i{
+  width:36px; height:36px; flex:0 0 36px;
+  border-radius:50%;
+  background:rgba(14,58,115,0.08);
+  color:var(--blue);
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.9rem;
+}
+
+.doctor-video-frame{
+  position:relative;
+  flex:0 0 auto;
+  width:100%; max-width:380px;
+  aspect-ratio:9/16;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  background:#0E3A73;
+  box-shadow:var(--shadow-soft);
+}
+.doctor-video{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  background:#0E3A73;
+}
+.video-play-btn{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:78px; height:78px; border-radius:50%;
+  background:rgba(255,255,255,0.95); border:none; color:var(--blue);
+  display:flex; align-items:center; justify-content:center; font-size:1.6rem;
+  cursor:pointer; z-index:3;
+  transition:transform .25s ease, background .25s ease;
+}
+.video-play-btn:hover{ transform:translate(-50%,-50%) scale(1.08); background:#fff; }
+.video-play-btn.is-hidden{ display:none; }
+.video-play-ring{
+  position:absolute; inset:-10px; border-radius:50%;
+  border:2px solid rgba(255,255,255,0.7);
+  animation:doctorPulse 2.4s ease-out infinite;
+}
+.video-caption-bar{
+  position:absolute; left:0; right:0; bottom:0; z-index:2;
+  padding:18px 20px 16px;
+  background:linear-gradient(0deg, rgba(8,20,38,0.85), transparent);
+  color:#fff; pointer-events:none;
+}
+.video-caption-bar strong{ display:block; font-size:0.95rem; }
+.video-caption-bar span{ font-size:0.78rem; opacity:0.85; }
+.doctor-video-frame.is-playing .video-caption-bar{ opacity:0; transition:opacity .3s ease; }
+
+@media (max-width: 860px){
+  .doctor-video-layout{ flex-direction:column-reverse; }
+  .doctor-info-panel{ text-align:center; max-width:520px; }
+  .doctor-highlights li{ text-align:left; }
+}
+
+@media (prefers-reduced-motion: reduce){ .video-play-ring{ animation:none; } }
+</style>
 </head>
 <body>
 <!-- ================= PRELOADER (shows on every page load) ================= -->
@@ -131,6 +232,66 @@
     </div>
   </div>
 </section>
+
+<!-- ================= DOCTOR'S MESSAGE — PORTRAIT VIDEO ================= -->
+<!-- Autoplay disabled per request: the video only starts on explicit user click.
+     Poster image shows first, native browser controls take over once playing
+     (Play, pause, volume, fullscreen, scrubbing all work out of the box). -->
+<section class="section-pad tint doctor-video-section">
+  <div class="container-xl">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow" style="justify-content:center;">In their own words</p>
+      <h2>What Our Doctors Say</h2>
+      <p style="color:var(--ink-soft); margin-top:12px;">A short message from Dr. P. Muralidharan on what patient-first cardiac and diabetic care means at Dhanyaa.</p>
+    </div>
+
+    <div class="doctor-video-layout">
+
+      <!-- Left: supporting content, fills the empty space -->
+      <div class="doctor-info-panel" data-aos="fade-up" data-aos-delay="60">
+        <i class="fa-solid fa-quote-left doctor-quote-icon"></i>
+        <p class="doctor-quote">Every patient deserves to understand their own heart — not just be handed a prescription.</p>
+
+        <ul class="doctor-highlights">
+          <li><i class="fa-solid fa-graduation-cap"></i><span>MD, DM Cardiology — 20+ years in clinical cardiac care</span></li>
+          <li><i class="fa-solid fa-heart-pulse"></i><span>Pioneered EECP therapy adoption in the region</span></li>
+          <li><i class="fa-solid fa-users"></i><span>Personally overseen 10,000+ patient consultations</span></li>
+          <li><i class="fa-solid fa-hospital"></i><span>Founder &amp; Chief Physician, Dhanyaa Medical Centre</span></li>
+        </ul>
+
+        <a href="#contact" class="btn-outline-pill">Book a Consultation <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Right: portrait video -->
+      <div class="doctor-video-frame" data-aos="fade-up" data-aos-delay="100">
+        <video
+          id="doctorVideo"
+          class="doctor-video"
+          poster="assets/img/dr-muralidharan.png"
+          preload="metadata"
+          playsinline
+          controls
+          controlsList="nodownload">
+          <source src="assets/video/Dr-speech.mp4" type="video/mp4">
+          Your browser doesn't support embedded video. You can
+          <a href="assets/video/Dr-speech.mp4">download the message</a> instead.
+        </video>
+
+        <button class="video-play-btn" id="videoPlayBtn" type="button" aria-label="Play message from Dr. P. Muralidharan">
+          <span class="video-play-ring"></span>
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <div class="video-caption-bar">
+          <strong>Dr. P. Muralidharan</strong>
+          <span>Chief &amp; Founder, Dhanyaa Medical Centre</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <!-- Team constellation — editorial rows instead of staff photo cards -->
 <section class="section-pad tint">
@@ -273,5 +434,24 @@
   </div>
 </div>
 
+
+<script>
+    /* ---------- Doctor's message video — click-to-play, autoplay explicitly disabled ---------- */
+const doctorVideo = document.getElementById("doctorVideo");
+const videoPlayBtn = document.getElementById("videoPlayBtn");
+if (doctorVideo && videoPlayBtn) {
+  videoPlayBtn.addEventListener("click", () => {
+    doctorVideo.play();
+    videoPlayBtn.classList.add("is-hidden");
+    videoPlayBtn.closest(".doctor-video-frame")?.classList.add("is-playing");
+  });
+  doctorVideo.addEventListener("pause", () => {
+    videoPlayBtn.classList.remove("is-hidden");
+  });
+  doctorVideo.addEventListener("ended", () => {
+    videoPlayBtn.classList.remove("is-hidden");
+  });
+}
+</script>
 </body>
 </html>
