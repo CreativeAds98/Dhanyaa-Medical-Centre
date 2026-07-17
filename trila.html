@@ -1,271 +1,806 @@
-<!-- Health Packages — clean pricing cards -->
-<section class="section-pad tint pkg-section">
-  <style>
-    .pkg-section .section-head { margin-bottom: 48px; }
+<!DOCTYPE html>
+<html lang="en" class="is-preloading">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhanyaa Medical Centre | Heart &amp; Diabetic Care, Coimbatore</title>
+<meta name="description" content="Dhanyaa Medical Centre, Coimbatore — specialised heart and diabetic diagnostic care. ECG, ECHO, TMT, EECP therapy and a full diagnostic lab under Dr. P. Muralidharan.">
+<meta name="keywords" content="heart care Coimbatore, diabetic care Coimbatore, ECG ECHO TMT, EECP therapy Coimbatore, Dr Muralidharan cardiologist, Dhanyaa Medical Centre">
+<meta property="og:title" content="Dhanyaa Medical Centre — Heart & Diabetic Care, Coimbatore">
+<meta property="og:description" content="Accurate diagnostics, compassionate care. ECG · ECHO · TMT · EECP · Diagnostic Lab.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.1/swiper-bundle.min.css">
+<link rel="preload" as="image" href="assets/hero-heart.png">
 
-    .pkg-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      align-items: stretch;
-    }
-    @media (max-width: 900px) {
-      .pkg-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Dhanyaa Medical Centre",
+  "description": "Heart and diabetic diagnostic care centre offering ECG, ECHO, TMT, EECP therapy and diagnostic laboratory services.",
+  "medicalSpecialty": ["Cardiology", "Endocrinology"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1, Lal Bahadur Colony, Peelamedu",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "641004",
+    "addressCountry": "IN"
+  },
+  "telephone": ["+91 77088 98135", "+91 90470 20490"],
+  "openingHours": "Mo-Sa 14:00-20:00",
+  "physician": {
+    "@type": "Physician",
+    "name": "Dr. P. Muralidharan",
+    "medicalSpecialty": "Cardiology"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "500"
+  }
+}
+</script>
 
-    .pkg-card {
-      background: #fff;
-      border-radius: 18px;
-      border: 1px solid rgba(10,61,110,0.08);
-      box-shadow: 0 2px 10px rgba(10,61,110,0.05);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: transform .25s ease, box-shadow .25s ease;
-      position: relative;
-    }
-    .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 18px 34px rgba(10,61,110,0.12); }
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- ================= PRELOADER (shows on every page load) ================= -->
+<div id="preloader">
+  <div class="logo-wrap">
+    <svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="preloaderDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0a3d6e"/>
+          <stop offset="100%" stop-color="#1a6bb5"/>
+        </linearGradient>
+        <linearGradient id="preloaderLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1e88e5"/>
+          <stop offset="100%" stop-color="#4fc3f7"/>
+        </linearGradient>
+      </defs>
+      <path class="piece dark" d="M184,255 L184,431 L751,846 L751,756 L688,755 L689,707 L751,707 L751,636 L324,345 L466,249 L606,332 L741,250 L464,90 Z"/>
+      <path class="piece light" d="M1350,255 L1065,91 L632,357 L632,410 L771,500 L774,433 L1064,251 L1209,346 L793,636 L793,708 L856,709 L855,755 L793,755 L793,846 L1351,432 Z"/>
+    </svg>
+  </div>
+  <div class="label">Loading&hellip;</div>
+</div>
 
-    .pkg-card[data-accent="heart"]  .pkg-bar { background: linear-gradient(90deg,#0a3d6e,#1a6bb5); }
-    .pkg-card[data-accent="diabetic"] .pkg-bar { background: linear-gradient(90deg,#0B5E5E,#158f8f); }
-    .pkg-card[data-accent="full"]   .pkg-bar { background: linear-gradient(90deg,#A8433D,#c85c50); }
-    .pkg-bar { height: 6px; width: 100%; }
 
-    /* Middle package called out as the balanced/recommended pick */
-    .pkg-card.pkg-featured {
-      border-color: rgba(11,94,94,0.35);
-      box-shadow: 0 10px 30px rgba(11,94,94,0.14);
-      transform: translateY(-10px);
-    }
-    .pkg-card.pkg-featured:hover { transform: translateY(-16px); }
-    @media (max-width: 900px) {
-      .pkg-card.pkg-featured { transform: none; }
-      .pkg-card.pkg-featured:hover { transform: translateY(-6px); }
-    }
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container-xl">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Dhanyaa Medical Centre" class="brand-logo-img">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="diagnostics.html">Diagnostics</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <a href="tel:+917708898135" class="btn-outline-pill d-none d-lg-inline-flex"><i class="fa-solid fa-phone"></i> Call Now</a>
+      <button class="btn-primary-pill js-open-appointment" type="button"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button>
+      <button class="nav-toggle" data-nav-open><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
 
-    .pkg-badge {
-      position: absolute;
-      top: 18px; right: 18px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #0B5E5E;
-      background: rgba(11,94,94,0.08);
-      padding: 5px 10px;
-      border-radius: 999px;
-    }
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mnav">
+  <button class="close-btn" data-nav-close><i class="fa-solid fa-xmark"></i></button>
+  <ul>
+    <li><a href="index.html" class="active" data-nav-close>Home</a></li>
+        <li><a href="about.html" data-nav-close>About</a></li>
+        <li><a href="services.html" data-nav-close>Services</a></li>
+        <li><a href="diagnostics.html" data-nav-close>Diagnostics</a></li>
+        <li><a href="doctors.html" data-nav-close>Doctors</a></li>
+        <li><a href="gallery.html" data-nav-close>Gallery</a></li>
+        <li><a href="blog.html" data-nav-close>Blog</a></li>
+        <li><a href="contact.html" data-nav-close>Contact</a></li>
+  </ul>
+  <button class="btn-primary-pill js-open-appointment" type="button" style="width:100%; justify-content:center; margin-top:10px;" data-nav-close>
+    <i class="fa-regular fa-calendar-check"></i> Book Appointment
+  </button>
+</div>
 
-    .pkg-body { padding: 30px 28px 28px; display: flex; flex-direction: column; flex: 1; }
-
-    .pkg-tag {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #6b7a8d;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .pkg-title {
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 1.32rem;
-      color: #0a3d6e;
-      line-height: 1.25;
-      margin-bottom: 18px;
-      min-height: 66px;
-    }
-
-    .pkg-price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-    .pkg-currency {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 1.1rem;
-      color: #0a3d6e;
-      opacity: 0.7;
-    }
-    .pkg-price {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 2.6rem;
-      color: #0a3d6e;
-      line-height: 1;
-    }
-    .pkg-price-note {
-      font-size: 0.82rem;
-      color: #8a96a3;
-      margin-bottom: 24px;
-    }
-
-    .pkg-divider { height: 1px; background: rgba(10,61,110,0.08); margin: 0 0 22px; }
-
-    .pkg-group { margin-bottom: 18px; }
-    .pkg-group-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #0B5E5E;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .pkg-list { list-style: none; padding: 0; margin: 0; }
-    .pkg-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 9px;
-      font-size: 0.9rem;
-      color: #3d4a58;
-      line-height: 1.45;
-      margin-bottom: 9px;
-    }
-    .pkg-list li i {
-      color: #0B5E5E;
-      font-size: 0.78rem;
-      margin-top: 4px;
-      flex-shrink: 0;
-    }
-
-    .pkg-cta {
-      margin-top: auto;
-      padding-top: 20px;
-    }
-    .pkg-cta .btn-primary-pill,
-    .pkg-cta .btn-outline-pill {
-      width: 100%;
-      justify-content: center;
-    }
-  </style>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <!-- Cinematic video background — Apple/Stripe-style hero treatment.
+       Muted/loop/playsinline is required for autoplay to work on mobile Safari & Chrome.
+       poster= shows a still frame instantly while the video buffers, avoiding a blank flash. -->
+  <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-heart.png" aria-hidden="true">
+    <source src="assets/hero-background.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-overlay"></div>
 
   <div class="container-xl">
-    <div class="section-head" data-aos="fade-up">
-      <p class="eyebrow" style="justify-content:center;">Preventive checkups</p>
-      <h2>Health packages for every stage of prevention.</h2>
+    <div class="hero-grid">
+      <div data-aos="fade-up">
+        <p class="eyebrow">Trusted care, advanced diagnostics</p>
+        <h1>Comprehensive <em>Heart &amp; Diabetic Care</em> you can rely on.</h1>
+        <p class="lead-copy">Accurate diagnostics and compassionate care under one roof — ECG, ECHO, TMT, EECP therapy and a fully equipped diagnostic lab, guided by three decades of clinical experience.</p>
+        <div class="hero-cta">
+          <button class="btn-primary-pill js-open-appointment" type="button"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button>
+          <a href="#services" class="btn-outline-pill">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-badges">
+          <div><i class="fa-solid fa-microchip"></i> Advanced Technology</div>
+          <div><i class="fa-solid fa-user-doctor"></i> Experienced Specialists</div>
+          <div><i class="fa-solid fa-hand-holding-heart"></i> Personalised Care</div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-up" data-aos-delay="150">
+        <div class="ring-orbit"></div>
+        <div class="heart-glow-ring"></div>
+        <div class="heart-float-wrap">
+          <div class="heart-video-frame">
+            <video
+              class="heart-video"
+              id="heartVideo"
+              autoplay muted loop playsinline
+              poster="assets/hero-heart.png"
+              aria-label="Looping animation of a glowing digital heart with an ECG waveform, representing Dhanyaa Medical Centre's advanced cardiac diagnostics">
+              <source src="assets/hero-background.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--
+        <div class="vitals-card float-card fc-1">
+          <div class="vitals-icon"><i class="fa-solid fa-wave-square"></i></div>
+          <div><div class="label">ECG</div><div class="sub">98% NORMAL RHYTHM</div></div>
+        </div>
+        <div class="vitals-card float-card fc-2">
+          <div class="vitals-icon" style="background:rgba(15,163,163,0.12); color:var(--teal);"><i class="fa-solid fa-heart-circle-bolt"></i></div>
+          <div><div class="label">ECHO</div><div class="sub">AI-ASSISTED · HIGH PRECISION</div></div>
+        </div>
+        <div class="vitals-card float-card fc-3">
+          <div class="vitals-icon" style="background:rgba(232,97,90,0.10); color:var(--red);"><i class="fa-solid fa-flask-vial"></i></div>
+          <div><div class="label">Lab Reports</div><div class="sub">READY SAME DAY</div></div>
+        </div>-->
+      </div>
     </div>
 
-    <div class="pkg-grid" data-aos="fade-up">
-
-      <!-- Package 1 -->
-      <div class="pkg-card" data-accent="heart">
-        <div class="pkg-bar"></div>
-        <div class="pkg-body">
-          <span class="pkg-tag">Foundational</span>
-          <h3 class="pkg-title">Basic Health Package</h3>
-          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">1,200</span></div>
-          <p class="pkg-price-note">One-time checkup</p>
-          <div class="pkg-divider"></div>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Blood Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> CBC — WBC, RBC, Hb, Platelet Count, PCV</li>
-              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine</li>
-              <li><i class="fa-solid fa-check"></i> RBS (Random Blood Sugar)</li>
-              <li><i class="fa-solid fa-check"></i> Total Cholesterol</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Cardiac Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> ECG</li>
-              <li><i class="fa-solid fa-check"></i> Echo Screening</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group" style="margin-bottom:0;">
-            <p class="pkg-group-label">Consultation</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> Doctor Consultation Included</li>
-            </ul>
-          </div>
-
-          <div class="pkg-cta">
-            <button class="btn-primary-pill js-open-appointment" type="button">Book This Package</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Package 2 — featured -->
-      <div class="pkg-card pkg-featured" data-accent="diabetic">
-        <span class="pkg-badge">Most chosen</span>
-        <div class="pkg-bar"></div>
-        <div class="pkg-body">
-          <span class="pkg-tag">Comprehensive</span>
-          <h3 class="pkg-title">Complete Heart &amp; Diabetic Panel</h3>
-          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">2,300</span></div>
-          <p class="pkg-price-note">One-time checkup</p>
-          <div class="pkg-divider"></div>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Blood Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> CBC (Complete Blood Count)</li>
-              <li><i class="fa-solid fa-check"></i> Glucose Profile — FBS &amp; PPBS</li>
-              <li><i class="fa-solid fa-check"></i> Lipid Profile — Cholesterol, HDL, LDL, VLDL</li>
-              <li><i class="fa-solid fa-check"></i> TSH (Thyroid Stimulating Hormone)</li>
-              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine, Uric Acid</li>
-              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group" style="margin-bottom:0;">
-            <p class="pkg-group-label">Cardiac Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> ECG</li>
-              <li><i class="fa-solid fa-check"></i> Complete Diagnostic Echocardiogram</li>
-            </ul>
-          </div>
-
-          <div class="pkg-cta">
-            <button class="btn-primary-pill js-open-appointment" type="button">Book This Package</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Package 3 -->
-      <div class="pkg-card" data-accent="full">
-        <div class="pkg-bar"></div>
-        <div class="pkg-body">
-          <span class="pkg-tag">Executive</span>
-          <h3 class="pkg-title">Executive Health Check-Up</h3>
-          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">3,500</span></div>
-          <p class="pkg-price-note">One-time checkup</p>
-          <div class="pkg-divider"></div>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Blood Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> Liver Function Test — Total Panel (Bilirubin, ALT, Albumin, GGT, PT Ratio, APTT)</li>
-              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group" style="margin-bottom:0;">
-            <p class="pkg-group-label">Cardiac Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> ECG</li>
-              <li><i class="fa-solid fa-check"></i> ECHO</li>
-              <li><i class="fa-solid fa-check"></i> TMT (Treadmill Stress Test)</li>
-            </ul>
-          </div>
-
-          <div class="pkg-cta">
-            <button class="btn-primary-pill js-open-appointment" type="button">Book This Package</button>
-          </div>
-        </div>
-      </div>
-
+    <div class="stat-strip" data-aos="fade-up">
+      <div class="stat"><span class="num">25+</span><span class="lab">Years of clinical experience</span></div>
+      <div class="stat"><span class="num">5</span><span class="lab">Advanced diagnostic services</span></div>
+      <div class="stat"><span class="num">Same-day</span><span class="lab">Lab report turnaround</span></div>
+      <div class="stat"><span class="num">2–8 PM</span><span class="lab">Mon–Sat consultation hours</span></div>
     </div>
-
-    <p class="text-center" style="margin-top:32px; font-size:0.85rem; color:#8a96a3;" data-aos="fade-up">
-      Prices are in Indian Rupees (&#8377;) and subject to change. Call the centre to confirm current rates.
-    </p>
   </div>
 </section>
+
+<div class="ecg-divider"><svg viewBox="0 0 600 34" preserveAspectRatio="none"><path d="M0 17 H140 L155 4 L170 30 L185 17 H230 L245 26 L260 8 L275 17 H600 M0 17 H140 L155 4 L170 30 L185 17 H230 L245 26 L260 8 L275 17 H600" transform="translate(300,0)" fill="none" stroke="#0FA3A3" stroke-width="2" stroke-linecap="round"/><path d="M0 17 H140 L155 4 L170 30 L185 17 H230 L245 26 L260 8 L275 17 H600" fill="none" stroke="#0FA3A3" stroke-width="2" stroke-linecap="round"/></svg></div>
+
+<!-- ================= ABOUT ================= -->
+<section class="section-pad" id="about">
+  <div class="container-xl">
+    <div class="about-editorial">
+
+      <!-- Sticky lead column: the "thesis" of who we are -->
+      <div class="about-lead" data-aos="fade-up">
+        <p class="eyebrow">Who we are</p>
+        <h2>Caring for hearts,<br>managing lives.</h2>
+        <p style="color:var(--ink-soft); margin-top:16px; line-height:1.7;">A specialised diagnostic centre focused on two deeply connected conditions — cardiovascular disease and diabetes — treated with an integrated, personal approach rather than in isolation.</p>
+
+        <div class="about-quote-panel">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Heart disease and diabetes, caught early and managed properly, do not have to control a person's life.</p>
+          <span class="about-quote-attr">— Our founding philosophy</span>
+        </div>
+      </div>
+
+      <!-- Numbered editorial rows instead of boxed cards -->
+      <div class="about-rows">
+        <div class="about-row" data-aos="fade-up">
+          <span class="about-row-index">01</span>
+          <div class="about-row-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="about-row-body">
+            <h3>Our Mission</h3>
+            <p>Early detection, accurate diagnosis, and effective long-term management of heart disease and diabetes — delivered with warmth and personal attention.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right about-row-arrow"></i>
+        </div>
+
+        <div class="about-row" data-aos="fade-up" data-aos-delay="100">
+          <span class="about-row-index">02</span>
+          <div class="about-row-icon" style="background:linear-gradient(135deg, rgba(15,163,163,0.15), rgba(24,88,168,0.1)); color:var(--teal);"><i class="fa-solid fa-link"></i></div>
+          <div class="about-row-body">
+            <h3>Our Approach</h3>
+            <p>Because diabetes is a major cardiovascular risk factor, our team aligns diagnostics, treatment plans, and lifestyle guidance around the whole patient.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right about-row-arrow"></i>
+        </div>
+
+        <div class="about-row" data-aos="fade-up" data-aos-delay="200">
+          <span class="about-row-index">03</span>
+          <div class="about-row-icon" style="background:rgba(232,97,90,0.1); color:var(--red);"><i class="fa-solid fa-people-group"></i></div>
+          <div class="about-row-body">
+            <h3>Our Team</h3>
+            <p>Dedicated technicians, laboratory professionals and consulting doctors — continuously trained to keep diagnostic care accurate and dependable.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right about-row-arrow"></i>
+        </div>
+
+        <div class="about-row" data-aos="fade-up" data-aos-delay="300">
+          <span class="about-row-index">04</span>
+          <div class="about-row-icon" style="background:rgba(24,88,168,0.1); color:var(--blue);"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <div class="about-row-body">
+            <h3>Our Commitment</h3>
+            <p>Timely results, dignified communication, and a clean, welcoming environment — accessible care without compromising on quality.</p>
+          </div>
+          <i class="fa-solid fa-arrow-right about-row-arrow"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section-pad tint" id="services">
+  <div class="container-xl">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow" style="justify-content:center;">Diagnostics &amp; treatment</p>
+      <h2>Accurate diagnosis. Meaningful treatment.</h2>
+    </div>
+
+    <div class="bento-grid">
+
+      <!-- Feature tile: flagship differentiator, spans 2x2 -->
+      <div class="bento-item bento-feature" data-aos="fade-up">
+        <i class="fa-solid fa-shield-heart bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <span class="bento-tag">Most requested</span>
+        <h3>Integrated Heart-Diabetic Plans</h3>
+        <p>A single, coordinated workup covering both cardiac and diabetic markers — reassessed regularly with your physician, so you're never juggling disconnected appointments.</p>
+        <a href="#contact" class="bento-link">Start a plan <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="80">
+        <i class="fa-solid fa-wave-square bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-wave-square"></i></div>
+        <h3>ECG</h3>
+        <p>Detects irregular rhythms and past heart attacks — painless, in 5–10 minutes.</p>
+        <div class="svc-meta"><span>No fasting</span><span>5–10 min</span></div>
+      </div>
+
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="120">
+        <i class="fa-solid fa-heart-circle-bolt bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-heart-circle-bolt"></i></div>
+        <h3>ECHO</h3>
+        <p>Ultrasound imaging of the heart's chambers, valves and vessels.</p>
+        <div class="svc-meta"><span>30–45 min</span></div>
+      </div>
+
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="160">
+        <i class="fa-solid fa-person-running bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-person-running"></i></div>
+        <h3>TMT</h3>
+        <p>Treadmill stress test revealing coronary blockages and cardiovascular fitness.</p>
+        <div class="svc-meta"><span>30–45 min</span></div>
+      </div>
+
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="180">
+        <i class="fa-solid fa-heart-pulse bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <h3>Holter Monitoring</h3>
+        <p>Continuously records your heart's rhythm over 24–48 hours to catch irregular beats.</p>
+        <div class="svc-meta"><span>24–48 hrs</span><span>Worn at home</span></div>
+      </div>
+
+      <div class="bento-item bento-wide" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-flask-vial bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-flask-vial"></i></div>
+        <h3>Diagnostic Laboratory</h3>
+        <p>Blood sugar, HbA1c, lipid profile, kidney &amp; liver function, thyroid and routine panels — reports same day for most tests.</p>
+        <div class="svc-meta"><span>Same-day reports</span></div>
+      </div>
+
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-syringe bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-syringe"></i></div>
+        <h3>Diabetic Care &amp; Management</h3>
+        <p>Initial assessment, monitoring, lifestyle guidance and complication screening.</p>
+        <div class="svc-meta"><span>Structured follow-up</span></div>
+      </div>
+
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="280">
+        <i class="fa-solid fa-shoe-prints bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+        <h3>Foot Ulcer Care</h3>
+        <p>Specialised wound care and dressing for diabetic foot ulcers to prevent infection.</p>
+        <div class="svc-meta"><span>Regular dressing</span><span>Infection prevention</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EECP FEATURE ================= -->
+<section class="section-pad">
+  <div class="container-xl">
+    <div class="feature-panel" data-aos="fade-up">
+      <div>
+        <p class="eyebrow">EECP Therapy</p>
+        <h2>A non-surgical way to a stronger heart.</h2>
+        <p style="opacity:0.9; margin-top:12px;">Enhanced External Counterpulsation is a non-invasive, outpatient treatment for chronic stable angina and coronary artery disease — especially for patients not suited to angioplasty or bypass surgery.</p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-circle-check"></i> Improves blood flow and builds natural collateral circulation</li>
+          <li><i class="fa-solid fa-circle-check"></i> Reduces frequency and severity of angina</li>
+          <li><i class="fa-solid fa-circle-check"></i> Improves exercise tolerance and quality of life</li>
+          <li><i class="fa-solid fa-circle-check"></i> Customised schedule based on your response to therapy</li>
+        </ul>
+        <a href="#contact" class="btn-outline-pill">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="feature-plan">
+        <p class="eyebrow" style="margin-bottom:16px;">Typical course</p>
+        <div class="big">35 sessions</div>
+        <p style="opacity:0.9; margin:6px 0 20px;">One hour per session, five days a week, over about seven weeks.</p>
+        <div style="display:flex; gap:20px;">
+          <div><div class="big" style="font-size:1.4rem;">7</div><div style="font-size:0.8rem; opacity:0.8;">Weeks</div></div>
+          <div><div class="big" style="font-size:1.4rem;">5/wk</div><div style="font-size:0.8rem; opacity:0.8;">Sessions</div></div>
+          <div><div class="big" style="font-size:1.4rem;">1 hr</div><div style="font-size:0.8rem; opacity:0.8;">Per visit</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARE PATHWAY ================= -->
+<section class="section-pad tint">
+  <div class="container-xl">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow" style="justify-content:center;">Diabetic care pathway</p>
+      <h2>A structured path, not a single visit.</h2>
+    </div>
+    <div class="pathway-row" data-aos="fade-up">
+      <div class="pathway-step">
+        <span class="idx">STEP 01</span>
+        <div class="pathway-circle"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h4>Initial Assessment</h4>
+        <p>Blood sugar, HbA1c &amp; related risk factors evaluated.</p>
+      </div>
+      <div class="pathway-step">
+        <span class="idx">STEP 02</span>
+        <div class="pathway-circle"><i class="fa-solid fa-calendar-check"></i></div>
+        <h4>Regular Monitoring</h4>
+        <p>Scheduled follow-ups track control over time.</p>
+      </div>
+      <div class="pathway-step">
+        <span class="idx">STEP 03</span>
+        <div class="pathway-circle"><i class="fa-solid fa-leaf"></i></div>
+        <h4>Lifestyle Guidance</h4>
+        <p>Practical diet and activity advice, tailored to you.</p>
+      </div>
+      <div class="pathway-step">
+        <span class="idx">STEP 04</span>
+        <div class="pathway-circle"><i class="fa-solid fa-shield-heart"></i></div>
+        <h4>Complication Screening</h4>
+        <p>Periodic checks for heart, kidney &amp; circulation risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MINI GALLERY: "INSIDE DHANYAA" ================= -->
+<!-- Asymmetric masonry showcase of the facility — replaces a boring stock-photo strip.
+     Tiles use icon+gradient placeholders now; swap background-image with real photography
+     (see image suggestions in the response) without touching layout or JS. 
+<section class="section-pad tint gallery-section" id="gallery">
+  <div class="container-xl">
+    <div class="section-head" data-aos="fade-up" style="margin-bottom:40px;">
+      <p class="eyebrow" style="justify-content:center;">Inside Dhanyaa</p>
+      <h2>A space designed to put you at ease.</h2>
+      <p style="color:var(--ink-soft); margin-top:12px;">A glimpse of our diagnostic suites, therapy rooms, and the calm, clinical environment behind every result.</p>
+    </div>
+
+    <div class="gallery-masonry" data-aos="fade-up" data-aos-delay="100">
+
+      <button class="gallery-tile gallery-tall gtile-1" data-caption="ECG &amp; ECHO Suite" data-icon="fa-wave-square">
+        <span class="gallery-icon"><i class="fa-solid fa-wave-square"></i></span>
+        <span class="gallery-caption">ECG &amp; ECHO Suite<em>Precision diagnostics, calm setting</em></span>
+      </button>
+
+      <button class="gallery-tile gtile-2" data-caption="EECP Therapy Room" data-icon="fa-heart-pulse">
+        <span class="gallery-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+        <span class="gallery-caption">EECP Therapy Room<em>Comfort during every session</em></span>
+      </button>
+
+      <button class="gallery-tile gtile-3" data-caption="Diagnostic Laboratory" data-icon="fa-flask-vial">
+        <span class="gallery-icon"><i class="fa-solid fa-flask-vial"></i></span>
+        <span class="gallery-caption">Diagnostic Laboratory<em>Same-day, quality-checked results</em></span>
+      </button>
+
+      <button class="gallery-tile gallery-wide gtile-4" data-caption="Consultation Room" data-icon="fa-user-doctor">
+        <span class="gallery-icon"><i class="fa-solid fa-user-doctor"></i></span>
+        <span class="gallery-caption">Consultation Room<em>Unhurried, one-to-one attention</em></span>
+      </button>
+
+      <button class="gallery-tile gtile-5" data-caption="Patient Waiting Lounge" data-icon="fa-couch">
+        <span class="gallery-icon"><i class="fa-solid fa-couch"></i></span>
+        <span class="gallery-caption">Waiting Lounge<em>Clean, calm, welcoming</em></span>
+      </button>
+
+      <button class="gallery-tile gtile-6" data-caption="TMT / Stress Test Room" data-icon="fa-person-running">
+        <span class="gallery-icon"><i class="fa-solid fa-person-running"></i></span>
+        <span class="gallery-caption">TMT Room<em>Monitored, safe exertion testing</em></span>
+      </button>
+
+    </div>
+
+    <div class="text-center" style="margin-top:36px;" data-aos="fade-up">
+      <a href="contact.html" class="btn-outline-pill">View Full Gallery <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>-->
+
+<!-- Lightbox overlay for gallery tiles -->
+<div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery preview"><i class="fa-solid fa-xmark"></i></button>
+  <div class="lightbox-panel">
+    <span class="gallery-icon lightbox-icon"><i class="fa-solid fa-heart-pulse" id="lightboxIcon"></i></span>
+    <h3 id="lightboxCaption">Facility Preview</h3>
+    <p style="color:rgba(255,255,255,0.7); font-size:0.9rem;">Real photography coming soon — for now, enjoy a preview of the room's purpose.</p>
+  </div>
+</div>
+
+<!-- ================= MINI APPOINTMENT BOOKING FORM (MODAL) =================
+     Triggered from every "Book Appointment" button site-wide (header, hero, CTA band).
+     Deliberately kept to 4 fields — Name, Phone, Service, Date — because every extra
+     field on a healthcare booking form measurably drops completion rate. Front desk
+     calls back to confirm, so we don't need time-slot logic or payment here. -->
+<div class="appt-modal" id="apptModal" aria-hidden="true">
+  <div class="appt-backdrop" data-appt-close></div>
+  <div class="appt-panel" role="dialog" aria-modal="true" aria-labelledby="apptTitle">
+    <button class="appt-close" data-appt-close aria-label="Close booking form"><i class="fa-solid fa-xmark"></i></button>
+
+    <!-- Booking form state -->
+    <div class="appt-view" id="apptFormView">
+      <div class="appt-panel-head">
+        <span class="appt-icon"><i class="fa-solid fa-calendar-heart"></i></span>
+        <h3 id="apptTitle">Book Your Appointment</h3>
+        <p>Share a few details — our front desk will call to confirm your slot.</p>
+      </div>
+
+      <form class="appt-form" id="apptForm" novalidate>
+        <div class="appt-field">
+          <input type="text" id="apptName" name="name" required placeholder=" " autocomplete="name">
+          <label for="apptName">Full Name</label>
+        </div>
+
+        <div class="appt-field">
+          <input type="tel" id="apptPhone" name="phone" required placeholder=" " autocomplete="tel" pattern="^[0-9+\-\s]{7,15}$">
+          <label for="apptPhone">Phone Number</label>
+        </div>
+
+        <div class="appt-row">
+          <div class="appt-field">
+            <select id="apptService" name="service" required>
+              <option value="" disabled selected hidden></option>
+              <option>ECG</option>
+              <option>ECHO</option>
+              <option>TMT</option>
+              <option>EECP Therapy</option>
+              <option>Diagnostic Lab</option>
+              <option>Diabetic Care</option>
+              <option>Preventive Checkup</option>
+              <option>General Consultation</option>
+            </select>
+            <label for="apptService">Service Needed</label>
+          </div>
+
+          <div class="appt-field">
+            <input type="date" id="apptDate" name="date" required placeholder=" ">
+            <label for="apptDate">Preferred Date</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary-pill appt-submit">
+          <i class="fa-regular fa-paper-plane"></i> Request Appointment
+        </button>
+
+        <p class="appt-note"><i class="fa-solid fa-shield-halved"></i> Used only to confirm this appointment — never shared.</p>
+      </form>
+    </div>
+
+    <!-- Confirmation state (shown after submit; wire apptForm's submit handler to your backend/CRM to send real data) -->
+    <div class="appt-view appt-success" id="apptSuccessView">
+      <div class="appt-success-icon"><i class="fa-solid fa-check"></i></div>
+      <h3>Request received!</h3>
+      <p>Thank you<span id="apptSuccessName"></span> — our front desk will call you shortly to confirm your appointment.</p>
+      <button class="btn-outline-pill" data-appt-close type="button">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= DOCTOR ================= -->
+<section class="section-pad" id="doctor">
+  <div class="container-xl">
+    <div class="doctor-panel" data-aos="fade-up">
+      <div>
+        <div class="doctor-photo-frame"> <img src="assets/img/dr-muralidharan.png" alt="Dr. P. Muralidharan" /></div>
+      </div>
+      <div>
+        <p class="eyebrow">Meet our chief</p>
+        <h2 style="font-size:1.9rem; margin-top:6px;">Dr. P. Muralidharan</h2>
+        <p style="color:var(--ink-soft); margin-top:4px;">MB, Dip Card, MHSc (Preventive Cardiology), FCCP, FIACC</p>
+        <div style="margin-top:14px;">
+          <span class="cred-chip"><i class="fa-solid fa-award"></i> FCCP 2012</span>
+          <span class="cred-chip"><i class="fa-solid fa-award"></i> FIACC 2025</span>
+          <span class="cred-chip"><i class="fa-solid fa-globe"></i> NHS London</span>
+          <span class="cred-chip"><i class="fa-solid fa-heart-pulse"></i> ACC Life Member</span>
+        </div>
+        <p style="color:var(--ink-soft); margin-top:18px; line-height:1.7;">A senior physician and non-invasive cardiologist with over three decades of experience in General Medicine, Diabetes Care, Preventive Cardiology and Non-Invasive Cardiology. A graduate of Coimbatore Medical College, with international clinical training including the NHS in London, the Maldives and the Sultanate of Oman.</p>
+        <ul class="doctor-timeline">
+          <li><strong>2006–2010</strong>Post Graduate Diploma in Clinical Cardiology, followed by MHSc in Preventive Cardiology.</li>
+          <li><strong>2012 &amp; 2025</strong>Fellowship of the College of Chest Physicians, and Fellowship of the Indian Academy of Clinical Cardiology.</li>
+          <li><strong>2:00 PM – 8:00 PM, Mon–Sat</strong>Consults at Dhanyaa Medical Centre in General Medicine, Diabetes, Preventive &amp; Non-Invasive Cardiology.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS / PATIENT REVIEWS ================= -->
+<!-- SEO: wrapped with Review + AggregateRating schema so eligible for star-rating rich snippets -->
+<section class="section-pad reviews-section" id="testimonials">
+  <div class="container-xl">
+
+    <div class="reviews-head" data-aos="fade-up">
+      <div>
+        <p class="eyebrow">Patient reviews</p>
+        <h2>Trusted by the people we've cared for.</h2>
+        <p style="color:var(--ink-soft); margin-top:12px; max-width:480px;">Real experiences from patients managing heart health and diabetes with Dhanyaa Medical Centre.</p>
+      </div>
+
+      <!-- Aggregate rating callout — glassmorphic, doubles as trust signal -->
+      <div class="rating-summary" itemscope itemtype="https://schema.org/AggregateRating">
+        <div class="rating-score" itemprop="ratingValue">5.0</div>
+        <div>
+          <div class="rating-stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="rating-count"><span itemprop="reviewCount">500</span>+ verified patient reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper carousel — smooth, touch-friendly, avoids the boxy static-grid feel -->
+    <div class="swiper reviews-swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="review-card" itemscope itemtype="https://schema.org/Review">
+            <i class="fa-solid fa-quote-left review-quote-icon"></i>
+            <div class="rating-stars small" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <meta itemprop="ratingValue" content="5">
+            </div>
+            <p itemprop="reviewBody">Dr. Muralidharan is friendly, transparent and professional, and always keen on educating his patients about their condition rather than just prescribing.</p>
+            <div class="review-person">
+              <div class="review-avatar">MM</div>
+              <div>
+                <strong itemprop="author">M Maruthachalam</strong>
+                <span>Google Local Guide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card" itemscope itemtype="https://schema.org/Review">
+            <i class="fa-solid fa-quote-left review-quote-icon"></i>
+            <div class="rating-stars small" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <meta itemprop="ratingValue" content="5">
+            </div>
+            <p itemprop="reviewBody">A genuinely nice doctor who explains health issues with calmness. Very good at his treatment, and it shows in how comfortable his patients feel.</p>
+            <div class="review-person">
+              <div class="review-avatar">Y</div>
+              <div>
+                <strong itemprop="author">Yashu</strong>
+                <span>Google Review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card" itemscope itemtype="https://schema.org/Review">
+            <i class="fa-solid fa-quote-left review-quote-icon"></i>
+            <div class="rating-stars small" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <meta itemprop="ratingValue" content="5">
+            </div>
+            <p itemprop="reviewBody">Prevention truly is better here. A very good physician with plenty of explanation and real knowledge transfer — polite and altogether excellent.</p>
+            <div class="review-person">
+              <div class="review-avatar">BA</div>
+              <div>
+                <strong itemprop="author">Baiju AK</strong>
+                <span>Google Local Guide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card" itemscope itemtype="https://schema.org/Review">
+            <i class="fa-solid fa-quote-left review-quote-icon"></i>
+            <div class="rating-stars small" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <meta itemprop="ratingValue" content="5">
+            </div>
+            <p itemprop="reviewBody">Dr. Muralidharan is one of the best cardiologists in Coimbatore — the best clinic for cardio and diabetes-related health issues, with a kind and well-mannered support staff.</p>
+            <div class="review-person">
+              <div class="review-avatar">DK</div>
+              <div>
+                <strong itemprop="author">D.K. Karthikeyan</strong>
+                <span>Google Local Guide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card" itemscope itemtype="https://schema.org/Review">
+            <i class="fa-solid fa-quote-left review-quote-icon"></i>
+            <div class="rating-stars small" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <meta itemprop="ratingValue" content="5">
+            </div>
+            <p itemprop="reviewBody">Excellent doctor, very polite, and the clinic has all the facilities needed for a quick and thorough screening.</p>
+            <div class="review-person">
+              <div class="review-avatar">BN</div>
+              <div>
+                <strong itemprop="author">Bharathi NM</strong>
+                <span>Google Local Guide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Custom nav + pagination, styled to match the design system rather than default Swiper UI -->
+      <div class="reviews-controls">
+        <button class="swiper-btn reviews-prev" aria-label="Previous review"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="swiper-pagination reviews-pagination"></div>
+        <button class="swiper-btn reviews-next" aria-label="Next review"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section-pad tint" id="contact">
+  <div class="container-xl">
+    <div class="cta-band" data-aos="fade-up">
+      <div>
+        <h2>Your heart deserves the best care.</h2>
+        <p>Call us or visit our centre — walk-ins welcome, though an appointment reduces your wait.</p>
+      </div>
+      <div class="cta-actions">
+        <button class="btn-primary-pill js-open-appointment" type="button"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button>
+        <a href="tel:+917708898135" class="btn-outline-pill"><i class="fa-solid fa-phone"></i> +91 77088 98135</a>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-5">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="svc-card">
+          <div class="svc-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Visit Us</h3>
+          <p>1, Lal Bahadur Colony, Peelamedu, Coimbatore, Tamil Nadu – 641004</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="svc-card">
+          <div class="svc-icon" style="background:rgba(15,163,163,0.12); color:var(--teal);"><i class="fa-solid fa-clock"></i></div>
+          <h3>Working Hours</h3>
+          <p>Monday – Saturday<br>2:00 PM – 8:00 PM</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="svc-card">
+          <div class="svc-icon" style="background:rgba(232,97,90,0.1); color:var(--red);"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>Book an Appointment</h3>
+          <p>For ECG, ECHO, TMT, EECP, lab tests or diabetic consultations — call or visit directly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container-xl">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="brand" style="margin-bottom:16px;">
+          <img src="assets/logo-footer.png" alt="Dhanyaa Medical Centre" class="brand-logo-footer">
+        </div>
+        <p style="font-size:0.9rem; max-width:320px;">Delivering advanced cardiac and diabetic diagnostic care with compassion, precision and trust.</p>
+        <div class="social-row">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Dhanyaa Medical Centre on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Dhanyaa Medical Centre on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Dhanyaa Medical Centre on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Dhanyaa Medical Centre on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="diagnostics.html">Diagnostics</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h5>Patients</h5>
+        <ul>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Patient Reviews</a></li>
+          <li><a href="blog.html">Health Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h5>Contact</h5>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Peelamedu, Coimbatore &ndash; 641004</li>
+          <li><i class="fa-solid fa-phone"></i> +91 77088 98135</li>
+          <li><i class="fa-solid fa-clock"></i> Mon&ndash;Sat, 2 PM &ndash; 8 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Dhanyaa Medical Centre. All rights reserved.</span>
+      <span>Designed & Developed by Creative Advs</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.1/swiper-bundle.min.js"></script>
+<script src="assets/main.js"></script>
+
+<!-- ================= FLOATING HELP + SCROLL-TO-TOP STACK ================= -->
+<div class="float-stack">
+  <!-- Mini animated "doctor" assistant — idle bob + pulsing ring, invites help/contact -->
+  <a href="tel:+917708898135" class="float-btn float-doctor" aria-label="Need help? Call Dhanyaa Medical Centre">
+    <span class="doctor-pulse-ring"></span>
+    <i class="fa-solid fa-user-doctor"></i>
+    <span class="doctor-badge"><i class="fa-solid fa-comment-dots"></i></span>
+    <span class="float-tooltip">Need help? Talk to us</span>
+  </a>
+
+  <!-- Scroll-to-top arrow — appears after scrolling past the hero -->
+  <button class="float-btn float-top" id="scrollTopBtn" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>
+
+
+</body>
+</html>
