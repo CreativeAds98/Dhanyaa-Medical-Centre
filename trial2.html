@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Doctors | Dr. P. Muralidharan, Cardiologist — Dhanyaa Medical Centre</title>
-<meta name="description" content="Meet Dr. P. Muralidharan and the clinical team at Dhanyaa Medical Centre, Coimbatore — specialists in preventive cardiology, diabetes care and EECP therapy.">
-<link rel="canonical" href="https://www.dhanyaamedicalcentre.com/doctors.html">
+<title>Diagnostics Explained | ECG, ECHO, TMT, EECP, Lab — Dhanyaa Medical Centre</title>
+<meta name="description" content="A clear guide to what each diagnostic test involves — ECG, ECHO, TMT, EECP therapy and lab panels — including duration, preparation and what each test detects.">
+<link rel="canonical" href="https://www.dhanyaamedicalcentre.com/diagnostics.html">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -20,117 +20,11 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Physician",
-    "name": "Dr. P. Muralidharan",
-    "medicalSpecialty": "Cardiology",
-    "alumniOf": "Coimbatore Medical College"
-  },
-  "url": "https://www.dhanyaamedicalcentre.com/doctors.html"
+  "@type": "MedicalWebPage",
+  "name": "Diagnostics at Dhanyaa Medical Centre",
+  "url": "https://www.dhanyaamedicalcentre.com/diagnostics.html"
 }
 </script>
-<style>
-    /* ---------- Doctor's message: two-column layout, video docked right ---------- */
-.doctor-video-layout{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:56px;
-  flex-wrap:wrap;
-}
-
-.doctor-info-panel{
-  flex:1 1 420px;
-  max-width:480px;
-}
-.doctor-quote-icon{
-  font-size:1.6rem;
-  color:var(--blue);
-  opacity:0.35;
-  margin-bottom:14px;
-  display:block;
-}
-.doctor-quote{
-  font-family:var(--font-serif, inherit);
-  font-size:1.4rem;
-  line-height:1.45;
-  color:var(--ink);
-  margin-bottom:28px;
-}
-.doctor-highlights{
-  list-style:none;
-  margin:0 0 32px;
-  padding:0;
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-.doctor-highlights li{
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
-  font-size:0.95rem;
-  color:var(--ink-soft);
-}
-.doctor-highlights i{
-  width:36px; height:36px; flex:0 0 36px;
-  border-radius:50%;
-  background:rgba(14,58,115,0.08);
-  color:var(--blue);
-  display:flex; align-items:center; justify-content:center;
-  font-size:0.9rem;
-}
-
-.doctor-video-frame{
-  position:relative;
-  flex:0 0 auto;
-  width:100%; max-width:380px;
-  aspect-ratio:9/16;
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  background:#0E3A73;
-  box-shadow:var(--shadow-soft);
-}
-.doctor-video{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  background:#0E3A73;
-}
-.video-play-btn{
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:78px; height:78px; border-radius:50%;
-  background:rgba(255,255,255,0.95); border:none; color:var(--blue);
-  display:flex; align-items:center; justify-content:center; font-size:1.6rem;
-  cursor:pointer; z-index:3;
-  transition:transform .25s ease, background .25s ease;
-}
-.video-play-btn:hover{ transform:translate(-50%,-50%) scale(1.08); background:#fff; }
-.video-play-btn.is-hidden{ display:none; }
-.video-play-ring{
-  position:absolute; inset:-10px; border-radius:50%;
-  border:2px solid rgba(255,255,255,0.7);
-  animation:doctorPulse 2.4s ease-out infinite;
-}
-.video-caption-bar{
-  position:absolute; left:0; right:0; bottom:0; z-index:2;
-  padding:18px 20px 16px;
-  background:linear-gradient(0deg, rgba(8,20,38,0.85), transparent);
-  color:#fff; pointer-events:none;
-}
-.video-caption-bar strong{ display:block; font-size:0.95rem; }
-.video-caption-bar span{ font-size:0.78rem; opacity:0.85; }
-.doctor-video-frame.is-playing .video-caption-bar{ opacity:0; transition:opacity .3s ease; }
-
-@media (max-width: 860px){
-  .doctor-video-layout{ flex-direction:column-reverse; }
-  .doctor-info-panel{ text-align:center; max-width:520px; }
-  .doctor-highlights li{ text-align:left; }
-}
-
-@media (prefers-reduced-motion: reduce){ .video-play-ring{ animation:none; } }
-</style>
 </head>
 <body>
 <!-- ================= PRELOADER (shows on every page load) ================= -->
@@ -164,8 +58,8 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="diagnostics.html">Diagnostics</a></li>
-        <li><a href="doctors.html" class="active">Doctors</a></li>
+        <li><a href="diagnostics.html" class="active">Diagnostics</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -186,8 +80,8 @@
     <li><a href="index.html" data-nav-close>Home</a></li>
         <li><a href="about.html" data-nav-close>About</a></li>
         <li><a href="services.html" data-nav-close>Services</a></li>
-        <li><a href="diagnostics.html" data-nav-close>Diagnostics</a></li>
-        <li><a href="doctors.html" class="active" data-nav-close>Doctors</a></li>
+        <li><a href="diagnostics.html" class="active" data-nav-close>Diagnostics</a></li>
+        <li><a href="doctors.html" data-nav-close>Doctors</a></li>
         <li><a href="gallery.html" data-nav-close>Gallery</a></li>
         <li><a href="blog.html" data-nav-close>Blog</a></li>
         <li><a href="contact.html" data-nav-close>Contact</a></li>
@@ -198,114 +92,175 @@
 </div>
 
 
-<section class="page-hero hero-tint-doctors">
+<section class="page-hero hero-tint-diagnostics">
   <div class="container-xl page-hero-content">
-    <p class="eyebrow">Our clinicians</p>
-    <h1>The people behind every diagnosis.</h1>
-    <p class="lead-copy">Three decades of clinical experience, international training, and a team trained to keep that standard consistent.</p>
-    <div class="breadcrumb-row"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Doctors</span></div>
+    <p class="eyebrow">Deep dive</p>
+    <h1>Every diagnostic test, explained clearly.</h1>
+    <p class="lead-copy">What each test is, what it detects, how long it takes, and how to prepare — no guesswork before your visit.</p>
+    <div class="breadcrumb-row"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Diagnostics</span></div>
   </div>
 </section>
 
 <section class="section-pad">
   <div class="container-xl">
-    <div class="doctor-panel" data-aos="fade-up">
-      <div><div class="doctor-photo-frame"><img src="assets/img/dr-muralidharan.jpg" alt="Dr. P. Muralidharan, Consultant Cardiologist at Dhanyaa Medical Centre, seated at his consultation desk" loading="lazy"></div></div>
-      <div>
-        <p class="eyebrow">Chief &amp; Founder</p>
-        <h2 style="font-size:1.9rem; margin-top:6px;">Dr. P. Muralidharan</h2>
-        <p style="color:var(--ink-soft); margin-top:4px;">MB, Dip Card, MHSc (Preventive Cardiology), FCCP, FIACC</p>
-        <div style="margin-top:14px;">
-          <span class="cred-chip"><i class="fa-solid fa-award"></i> FCCP 2012</span>
-          <span class="cred-chip"><i class="fa-solid fa-award"></i> FIACC 2025</span>
-          <span class="cred-chip"><i class="fa-solid fa-globe"></i> NHS London</span>
-          <span class="cred-chip"><i class="fa-solid fa-heart-pulse"></i> ACC Life Member</span>
-        </div>
-        <p style="color:var(--ink-soft); margin-top:18px; line-height:1.7;">A senior physician and non-invasive cardiologist with over three decades of experience in General Medicine, Diabetes Care, Preventive Cardiology and Non-Invasive Cardiology. Graduate of Coimbatore Medical College (1995), with international clinical training via the NHS in London, the Maldives and the Sultanate of Oman.</p>
-        <ul class="doctor-timeline">
-          <li><strong>2006–2010</strong>Post Graduate Diploma in Clinical Cardiology, followed by MHSc in Preventive Cardiology.</li>
-          <li><strong>2012 &amp; 2025</strong>Fellowship of the College of Chest Physicians; Fellowship of the Indian Academy of Clinical Cardiology.</li>
-          <li><strong>2025</strong>Certificate Course in Evidence Based Diabetes Management (CCEBDM), PHFI.</li>
-          <li><strong>2:00 PM – 8:00 PM, Mon–Sat</strong>Consults at Dhanyaa Medical Centre in General Medicine, Diabetes, Preventive &amp; Non-Invasive Cardiology.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= DOCTOR'S MESSAGE — PORTRAIT VIDEO ================= -->
-<!-- Autoplay disabled per request: the video only starts on explicit user click.
-     Poster image shows first, native browser controls take over once playing
-     (Play, pause, volume, fullscreen, scrubbing all work out of the box). -->
-<section class="section-pad tint doctor-video-section">
-  <div class="container-xl">
-    <div class="section-head" data-aos="fade-up">
-      <p class="eyebrow" style="justify-content:center;">In their own words</p>
-      <h2>What Our Doctors Say</h2>
-      <p style="color:var(--ink-soft); margin-top:12px;">A short message from Dr. P. Muralidharan on what patient-first cardiac and diabetic care means at Dhanyaa.</p>
-    </div>
-
-    <div class="doctor-video-layout">
-
-      <!-- Left: supporting content, fills the empty space -->
-      <div class="doctor-info-panel" data-aos="fade-up" data-aos-delay="60">
-        <i class="fa-solid fa-quote-left doctor-quote-icon"></i>
-        <p class="doctor-quote">Every patient deserves to understand their own heart — not just be handed a prescription.</p>
-
-        <ul class="doctor-highlights">
-          <li><i class="fa-solid fa-graduation-cap"></i><span>MD, DM Cardiology — 20+ years in clinical cardiac care</span></li>
-          <li><i class="fa-solid fa-heart-pulse"></i><span>Pioneered EECP therapy adoption in the region</span></li>
-          <li><i class="fa-solid fa-users"></i><span>Personally overseen 10,000+ patient consultations</span></li>
-          <li><i class="fa-solid fa-hospital"></i><span>Founder &amp; Chief Physician, Dhanyaa Medical Centre</span></li>
-        </ul>
-
-        <a href="#contact" class="btn-outline-pill">Book a Consultation <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-
-      <!-- Right: portrait video -->
-      <div class="doctor-video-frame" data-aos="fade-up" data-aos-delay="100">
-        <video
-          id="doctorVideo"
-          class="doctor-video"
-          poster="assets/img/dr-muralidharan.png"
-          preload="metadata"
-          playsinline
-          controls
-          controlsList="nodownload">
-          <source src="assets/video/Dr-speech.mp4" type="video/mp4">
-          Your browser doesn't support embedded video. You can
-          <a href="assets/video/Dr-speech.mp4">download the message</a> instead.
-        </video>
-
-        <button class="video-play-btn" id="videoPlayBtn" type="button" aria-label="Play message from Dr. P. Muralidharan">
-          <span class="video-play-ring"></span>
-          <i class="fa-solid fa-play"></i>
+    <div class="diag-accordion" data-aos="fade-up">
+      
+      <div class="diag-item is-open">
+        <button class="diag-trigger">
+          <span class="diag-num">01</span>
+          <span class="diag-icon"><i class="fa-solid fa-wave-square"></i></span>
+          <h3>ECG — Electrocardiogram</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
         </button>
-
-        <div class="video-caption-bar">
-          <strong>Dr. P. Muralidharan</strong>
-          <span>Chief &amp; Founder, Dhanyaa Medical Centre</span>
-        </div>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>A simple, painless test that records the heart's electrical signals using small electrodes on your chest, arms and legs.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Irregular heart rhythms, signs of a past or ongoing heart attack, heart enlargement.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>5–10 minutes.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>No special preparation. Avoid oil or lotion on the chest area.</p></div>
+        </div></div>
       </div>
-
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">02</span>
+          <span class="diag-icon"><i class="fa-solid fa-heart-circle-bolt"></i></span>
+          <h3>ECHO — Echocardiogram</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>An ultrasound-based imaging test creating real-time images of the heart's chambers, valves and major vessels.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Valve disorders, heart failure, congenital defects, blood clots, pumping efficiency.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>30–45 minutes.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>No fasting required; wear comfortable clothing.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">03</span>
+          <span class="diag-icon"><i class="fa-solid fa-person-running"></i></span>
+          <h3>TMT — Treadmill / Stress Test</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>Monitors heart performance while you walk on a treadmill at increasing difficulty, simulating exertion.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Coronary artery blockages, exercise-induced arrhythmias, cardiovascular fitness.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>30–45 minutes including recovery monitoring.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>Avoid heavy meals, caffeine and smoking 2–3 hours prior.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">04</span>
+          <span class="diag-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+          <h3>EECP — Enhanced External Counterpulsation</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>Inflatable cuffs on the calves, thighs and lower body inflate and deflate in sync with your heartbeat, improving blood flow and building collateral circulation.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Chronic stable angina and coronary artery disease not suited to surgery.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>35 one-hour sessions over ~7 weeks, 5 sessions/week.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>Comfortable, loose clothing recommended.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">05</span>
+          <span class="diag-icon"><i class="fa-solid fa-flask-vial"></i></span>
+          <h3>LAB — Diagnostic Laboratory</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>In-house lab testing across blood sugar, HbA1c, lipid profile, kidney &amp; liver function, thyroid, and routine panels.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Diabetic control, cardiovascular risk factors, organ function.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>Most reports same day.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>Fasting required for some panels — front desk will advise.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">06</span>
+          <span class="diag-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+          <h3>Holter Monitoring</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>A small, portable device worn on the body that continuously records your heart's electrical activity over an extended period at home.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Intermittent irregular heartbeats, palpitations and rhythm disturbances that a routine ECG can miss.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>24–48 hours of continuous wear.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>No special preparation; continue normal daily activities while wearing the device.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">07</span>
+          <span class="diag-icon"><i class="fa-solid fa-shoe-prints"></i></span>
+          <h3>Foot Ulcer Care</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>Specialised wound care and dressing for diabetic foot ulcers, with regular monitoring to support healing.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Early signs of infection, poor circulation, and delayed healing risk in the affected foot.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>Ongoing, based on ulcer severity and healing progress.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>None required; bring previous dressing or wound-care records if available.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">08</span>
+          <span class="diag-icon"><i class="fa-solid fa-heart-circle-check"></i></span>
+          <h3>Cardiac Care Management &amp; Rehabilitation</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>Structured, ongoing management and counselling for heart failure and related cardiac conditions — a continuing care relationship rather than a one-time test.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Heart failure progression, coronary artery disease, congenital heart disease, valvular heart disease.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>Ongoing, with regular follow-up visits.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>Bring prior test results and a current medication list to your first visit.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">09</span>
+          <span class="diag-icon"><i class="fa-solid fa-gauge-high"></i></span>
+          <h3>Adult Metabolic Syndrome Screening</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>A focused screening panel covering the cluster of risk factors that together raise heart disease and diabetes risk.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Elevated blood pressure, blood sugar, cholesterol levels and abdominal waist measurement.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>Typically completed in a single visit.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>Fasting may be required for blood work — front desk will advise.</p></div>
+        </div></div>
+      </div>
+      <div class="diag-item">
+        <button class="diag-trigger">
+          <span class="diag-num">10</span>
+          <span class="diag-icon"><i class="fa-solid fa-weight-scale"></i></span>
+          <h3>Obesity Management</h3>
+          <i class="fa-solid fa-chevron-down diag-chevron"></i>
+        </button>
+        <div class="diag-panel"><div class="diag-panel-inner">
+          <div class="diag-meta"><strong>What it is</strong><p>A structured, supportive programme for sustainable weight reduction, combining sleep screening with personalised dietary guidance.</p></div>
+          <div class="diag-meta"><strong>What it detects</strong><p>Obstructive sleep apnoea (via sleep study) and dietary factors contributing to weight gain.</p></div>
+          <div class="diag-meta"><strong>Duration</strong><p>Ongoing programme with periodic check-ins.</p></div>
+          <div class="diag-meta"><strong>Preparation</strong><p>None required for the initial consultation.</p></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:44px;" data-aos="fade-up">
+      <button class="btn-primary-pill js-open-appointment" type="button"><i class="fa-regular fa-calendar-check"></i> Book a Diagnostic Test</button>
     </div>
   </div>
 </section>
 
-
-
-<!-- Team constellation — editorial rows instead of staff photo cards -->
 <section class="section-pad tint">
   <div class="container-xl">
-    <div class="section-head" data-aos="fade-up"><p class="eyebrow" style="justify-content:center;">The wider team</p><h2>Every role behind your care.</h2></div>
-    <div data-aos="fade-up">
-      <div class="team-row"><div class="team-icon"><i class="fa-solid fa-user-doctor"></i></div><div><h3>Consulting Cardiologists &amp; Diabetologists</h3><p>Review test results, guide treatment plans, and provide expert consultation for complex cases.</p></div></div>
-      <div class="team-row"><div class="team-icon"><i class="fa-solid fa-wave-square"></i></div><div><h3>Diagnostic Technicians</h3><p>Certified ECG, ECHO and TMT technicians trained to operate advanced equipment with precision and care.</p></div></div>
-      <div class="team-row"><div class="team-icon"><i class="fa-solid fa-heart-pulse"></i></div><div><h3>EECP Therapy Specialists</h3><p>Specially trained in administering counterpulsation therapy and monitoring patient response each session.</p></div></div>
-      <div class="team-row"><div class="team-icon"><i class="fa-solid fa-flask-vial"></i></div><div><h3>Laboratory Staff</h3><p>Follow strict quality control protocols to ensure every panel delivers reliable, accurate results.</p></div></div>
-      <div class="team-row"><div class="team-icon"><i class="fa-solid fa-headset"></i></div><div><h3>Front Desk &amp; Patient Support</h3><p>Often your first point of contact — assist with scheduling, preparation guidance, and a smooth visit.</p></div></div>
+    <div class="section-head" data-aos="fade-up"><p class="eyebrow" style="justify-content:center;">Diabetic care pathway</p><h2>A structured path, not a single visit.</h2></div>
+    <div class="pathway-row" data-aos="fade-up">
+      <div class="pathway-step"><span class="idx">STEP 01</span><div class="pathway-circle"><i class="fa-solid fa-clipboard-list"></i></div><h4>Initial Assessment</h4><p>Blood sugar, HbA1c &amp; risk factors evaluated.</p></div>
+      <div class="pathway-step"><span class="idx">STEP 02</span><div class="pathway-circle"><i class="fa-solid fa-calendar-check"></i></div><h4>Regular Monitoring</h4><p>Scheduled follow-ups track control over time.</p></div>
+      <div class="pathway-step"><span class="idx">STEP 03</span><div class="pathway-circle"><i class="fa-solid fa-leaf"></i></div><h4>Lifestyle Guidance</h4><p>Practical diet and activity advice.</p></div>
+      <div class="pathway-step"><span class="idx">STEP 04</span><div class="pathway-circle"><i class="fa-solid fa-shield-heart"></i></div><h4>Complication Screening</h4><p>Periodic checks for heart, kidney &amp; circulation risk.</p></div>
     </div>
-    <div class="text-center" style="margin-top:40px;" data-aos="fade-up"><button class="btn-primary-pill js-open-appointment" type="button"><i class="fa-regular fa-calendar-check"></i> Book a Consultation</button></div>
   </div>
 </section>
 
@@ -434,25 +389,6 @@
     </div>
   </div>
 </div>
-
-<script>
-    /* ---------- Doctor's message video — click-to-play, autoplay explicitly disabled ---------- */
-const doctorVideo = document.getElementById("doctorVideo");
-const videoPlayBtn = document.getElementById("videoPlayBtn");
-if (doctorVideo && videoPlayBtn) {
-  videoPlayBtn.addEventListener("click", () => {
-    doctorVideo.play();
-    videoPlayBtn.classList.add("is-hidden");
-    videoPlayBtn.closest(".doctor-video-frame")?.classList.add("is-playing");
-  });
-  doctorVideo.addEventListener("pause", () => {
-    videoPlayBtn.classList.remove("is-hidden");
-  });
-  doctorVideo.addEventListener("ended", () => {
-    videoPlayBtn.classList.remove("is-hidden");
-  });
-}
-</script>
 
 </body>
 </html>

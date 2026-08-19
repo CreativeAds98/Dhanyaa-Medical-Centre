@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | ECG, ECHO, TMT, EECP & Diagnostic Lab — Dhanyaa Medical Centre</title>
-<meta name="description" content="Explore Dhanyaa Medical Centre's cardiac and diabetic services: ECG, ECHO, TMT, EECP therapy, diagnostic lab, diabetic care and integrated heart-diabetic treatment plans in Coimbatore.">
-<link rel="canonical" href="https://www.dhanyaamedicalcentre.com/services.html">
+<title>Gallery | Inside Dhanyaa Medical Centre, Coimbatore</title>
+<meta name="description" content="Take a visual tour of Dhanyaa Medical Centre's diagnostic suites, EECP therapy room, laboratory and patient facilities in Coimbatore.">
+<link rel="canonical" href="https://www.dhanyaamedicalcentre.com/gallery.html">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -17,155 +17,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.1/swiper-bundle.min.css">
 <link rel="stylesheet" href="assets/style.css">
 
-  <style>
-    .pkg-section .section-head { margin-bottom: 48px; }
-
-    .pkg-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      align-items: stretch;
-    }
-    @media (max-width: 900px) {
-      .pkg-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    }
-
-    .pkg-card {
-      background: #fff;
-      border-radius: 18px;
-      border: 1px solid rgba(10,61,110,0.08);
-      box-shadow: 0 2px 10px rgba(10,61,110,0.05);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: transform .25s ease, box-shadow .25s ease;
-      position: relative;
-    }
-    .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 18px 34px rgba(10,61,110,0.12); }
-
-    .pkg-card[data-accent="heart"]  .pkg-bar { background: linear-gradient(90deg,#0a3d6e,#1a6bb5); }
-    .pkg-card[data-accent="diabetic"] .pkg-bar { background: linear-gradient(90deg,#0B5E5E,#158f8f); }
-    .pkg-card[data-accent="full"]   .pkg-bar { background: linear-gradient(90deg,#A8433D,#c85c50); }
-    .pkg-bar { height: 6px; width: 100%; }
-
-    /* Middle package called out as the balanced/recommended pick */
-    .pkg-card.pkg-featured {
-      border-color: rgba(11,94,94,0.35);
-      box-shadow: 0 10px 30px rgba(11,94,94,0.14);
-      transform: translateY(-10px);
-    }
-    .pkg-card.pkg-featured:hover { transform: translateY(-16px); }
-    @media (max-width: 900px) {
-      .pkg-card.pkg-featured { transform: none; }
-      .pkg-card.pkg-featured:hover { transform: translateY(-6px); }
-    }
-
-    .pkg-badge {
-      position: absolute;
-      top: 18px; right: 18px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #0B5E5E;
-      background: rgba(11,94,94,0.08);
-      padding: 5px 10px;
-      border-radius: 999px;
-    }
-
-    .pkg-body { padding: 30px 28px 28px; display: flex; flex-direction: column; flex: 1; }
-
-    .pkg-tag {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #6b7a8d;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .pkg-title {
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 1.32rem;
-      color: #0a3d6e;
-      line-height: 1.25;
-      margin-bottom: 18px;
-      min-height: 66px;
-    }
-
-    .pkg-price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-    .pkg-currency {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 1.1rem;
-      color: #0a3d6e;
-      opacity: 0.7;
-    }
-    .pkg-price {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 2.6rem;
-      color: #0a3d6e;
-      line-height: 1;
-    }
-    .pkg-price-note {
-      font-size: 0.82rem;
-      color: #8a96a3;
-      margin-bottom: 24px;
-    }
-
-    .pkg-divider { height: 1px; background: rgba(10,61,110,0.08); margin: 0 0 22px; }
-
-    .pkg-group { margin-bottom: 18px; }
-    .pkg-group-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #0B5E5E;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .pkg-list { list-style: none; padding: 0; margin: 0; }
-    .pkg-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 9px;
-      font-size: 0.9rem;
-      color: #3d4a58;
-      line-height: 1.45;
-      margin-bottom: 9px;
-    }
-    .pkg-list li i {
-      color: #0B5E5E;
-      font-size: 0.78rem;
-      margin-top: 4px;
-      flex-shrink: 0;
-    }
-
-    .pkg-cta {
-      margin-top: auto;
-      padding-top: 20px;
-    }
-    .pkg-cta .btn-primary-pill,
-    .pkg-cta .btn-outline-pill {
-      width: 100%;
-      justify-content: center;
-    }
-  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "Services at Dhanyaa Medical Centre",
-  "about": ["Cardiology", "Endocrinology", "Diagnostic Imaging"],
-  "url": "https://www.dhanyaamedicalcentre.com/services.html"
+  "@type": "ImageGallery",
+  "name": "Dhanyaa Medical Centre Facility Gallery",
+  "url": "https://www.dhanyaamedicalcentre.com/gallery.html"
 }
 </script>
 </head>
@@ -200,10 +57,10 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="diagnostics.html">Diagnostics</a></li>
         <li><a href="doctors.html">Doctors</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -222,10 +79,10 @@
   <ul>
     <li><a href="index.html" data-nav-close>Home</a></li>
         <li><a href="about.html" data-nav-close>About</a></li>
-        <li><a href="services.html" class="active" data-nav-close>Services</a></li>
+        <li><a href="services.html" data-nav-close>Services</a></li>
         <li><a href="diagnostics.html" data-nav-close>Diagnostics</a></li>
         <li><a href="doctors.html" data-nav-close>Doctors</a></li>
-        <li><a href="gallery.html" data-nav-close>Gallery</a></li>
+        <li><a href="gallery.html" class="active" data-nav-close>Gallery</a></li>
         <li><a href="blog.html" data-nav-close>Blog</a></li>
         <li><a href="contact.html" data-nav-close>Contact</a></li>
   </ul>
@@ -235,210 +92,119 @@
 </div>
 
 
-<section class="page-hero hero-tint-services">
+<section class="page-hero hero-tint-gallery">
   <div class="container-xl page-hero-content">
-    <p class="eyebrow">What we offer</p>
-    <h1>Diagnostics and treatment, built around you.</h1>
-    <p class="lead-copy">From a 10-minute ECG to a full 35-session EECP course, every service is designed for accurate results and meaningful next steps.</p>
-    <div class="breadcrumb-row"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Services</span></div>
+    <p class="eyebrow">Take a look inside</p>
+    <h1>A space designed to put you at ease.</h1>
+    <p class="lead-copy">Our diagnostic suites, therapy rooms and the calm, clinical environment behind every result.</p>
+    <div class="breadcrumb-row"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Gallery</span></div>
   </div>
 </section>
 
 <section class="section-pad">
   <div class="container-xl">
-    <div class="bento-grid">
-      <div class="bento-item bento-feature" data-aos="fade-up">
-        <i class="fa-solid fa-shield-heart bento-ghost-icon"></i>
-        <div class="bento-icon"><i class="fa-solid fa-shield-heart"></i></div>
-        <span class="bento-tag">Most requested</span>
-        <h3>Integrated Heart-Diabetic Plans</h3>
-        <p>A single, coordinated workup covering both cardiac and diabetic markers — reassessed regularly with your physician.</p>
-        <a href="appointment.html" class="bento-link">Start a plan <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="bento-item" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-wave-square bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-wave-square"></i></div><h3>ECG</h3><p>Detects irregular rhythms and past heart attacks — painless, 5–10 minutes.</p><div class="svc-meta"><span>No fasting</span><span>5–10 min</span></div></div>
-      <div class="bento-item" data-aos="fade-up" data-aos-delay="120"><i class="fa-solid fa-heart-circle-bolt bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-heart-circle-bolt"></i></div><h3>ECHO</h3><p>Ultrasound imaging of the heart's chambers, valves and vessels.</p><div class="svc-meta"><span>30–45 min</span></div></div>
-      <div class="bento-item" data-aos="fade-up" data-aos-delay="160"><i class="fa-solid fa-person-running bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-person-running"></i></div><h3>TMT</h3><p>Treadmill stress test revealing coronary blockages and fitness.</p><div class="svc-meta"><span>30–45 min</span></div></div>
-      <div class="bento-item" data-aos="fade-up" data-aos-delay="180">
-        <i class="fa-solid fa-heart-pulse bento-ghost-icon"></i>
-        <div class="bento-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-        <h3>Holter Monitoring</h3>
-        <p>Continuously records your heart's rhythm over 24–48 hours to catch irregular beats.</p>
-        <div class="svc-meta"><span>24–48 hrs</span><span>Worn at home</span></div>
-      </div>
-      <div class="bento-item bento-wide" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-flask-vial bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-flask-vial"></i></div><h3>Diagnostic Laboratory</h3><p>Blood sugar, HbA1c, lipid profile, kidney &amp; liver function, thyroid and routine panels — same-day reports.</p><div class="svc-meta"><span>Same-day reports</span></div></div>
-      <div class="bento-item" data-aos="fade-up" data-aos-delay="240"><i class="fa-solid fa-syringe bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-syringe"></i></div><h3>Diabetic Care</h3><p>Initial assessment, monitoring, lifestyle guidance and complication screening.</p><div class="svc-meta"><span>Structured follow-up</span></div></div>
-      <div class="bento-item" data-aos="fade-up" data-aos-delay="280">
-        <i class="fa-solid fa-shoe-prints bento-ghost-icon"></i>
-        <div class="bento-icon"><i class="fa-solid fa-shoe-prints"></i></div>
-        <h3>Foot Ulcer Care</h3>
-        <p>Specialised wound care and dressing for diabetic foot ulcers to prevent infection.</p>
-        <div class="svc-meta"><span>Infection prevention</span></div>
-      </div>
+    <div class="gallery-filters" data-aos="fade-up">
+      <button class="gallery-filter-btn active" data-filter="all">All</button>
+      <button class="gallery-filter-btn" data-filter="diagnostics">Diagnostics</button>
+      <button class="gallery-filter-btn" data-filter="therapy">Therapy</button>
+      <button class="gallery-filter-btn" data-filter="facility">Facility</button>
+    </div>
+    <div class="gallery-masonry" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- NEW — 10 additional photos, placed above the existing set -->
+      <button class="gallery-tile " data-category="facility" data-full="assets/img/gallery-new1.jpeg" data-caption="OP Section" data-sub="Where every visit begins">
+        <img src="assets/img/gallery-new1.jpeg" alt="Outpatient section at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">OP Section<em>Where every visit begins</em></span>
+      </button>
+      <button class="gallery-tile " data-category="facility" data-full="assets/img/gallery-new2.jpeg" data-caption="Consulting" data-sub="One-to-one time with your doctor">
+        <img src="assets/img/gallery-new2.jpeg" alt="Consultation in progress at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Consulting<em>One-to-one time with your doctor</em></span>
+      </button>
+      <button class="gallery-tile " data-category="facility" data-full="assets/img/gallery-new3.jpeg" data-caption="Doctor's Room" data-sub="Where your care plan takes shape">
+        <img src="assets/img/gallery-new3.jpeg" alt="Doctor's consultation room at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Doctor's Room<em>Where your care plan takes shape</em></span>
+      </button>
+      <button class="gallery-tile " data-category="therapy" data-full="assets/img/gallery-new4.jpeg" data-caption="Treadmill Room" data-sub="Monitored stress testing">
+        <img src="assets/img/gallery-new4.jpeg" alt="Treadmill stress test room at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Treadmill Room<em>Monitored stress testing</em></span>
+      </button>
+      <button class="gallery-tile " data-category="facility" data-full="assets/img/gallery-new5.jpeg" data-caption="Outside View" data-sub="A welcoming, purpose-built space">
+        <img src="assets/img/gallery-new5.jpeg" alt="Exterior view of Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Outside View<em>A welcoming, purpose-built space</em></span>
+      </button>
+      <button class="gallery-tile gallery-wide" data-category="facility" data-full="assets/img/gallery-new6.jpg" data-caption="Reception Area" data-sub="Your first point of contact">
+        <img src="assets/img/gallery-new6.jpg" alt="Reception area at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Reception Area<em>Your first point of contact</em></span>
+      </button>
+      <button class="gallery-tile " data-category="therapy" data-full="assets/img/gallery-new7.jpg" data-caption="EECP Therapy" data-sub="Non-surgical care for a stronger heart">
+        <img src="assets/img/gallery-new7.jpg" alt="EECP therapy session at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">EECP Therapy<em>Non-surgical care for a stronger heart</em></span>
+      </button>
+      <button class="gallery-tile " data-category="therapy" data-full="assets/img/gallery-new8.jpg" data-caption="EECP Therapy" data-sub="Comfort during every session">
+        <img src="assets/img/gallery-new8.jpg" alt="EECP therapy equipment at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">EECP Therapy<em>Comfort during every session</em></span>
+      </button>
+
+      <!-- Portrait images — tall tile so the crop doesn't butcher a vertical shot -->
+      <button class="gallery-tile gallery-tall" data-category="facility" data-full="assets/img/gallery-new9.jpg" data-caption="Waiting Area" data-sub="Clean, calm, welcoming">
+        <img src="assets/img/gallery-new9.jpg" alt="Patient waiting area at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Waiting Area<em>Clean, calm, welcoming</em></span>
+      </button>
+      <button class="gallery-tile gallery-tall" data-category="facility" data-full="assets/img/gallery-new10.jpg" data-caption="Waiting Area" data-sub="Space to sit back and relax">
+        <img src="assets/img/gallery-new10.jpg" alt="Patient waiting area seating at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Waiting Area<em>Space to sit back and relax</em></span>
+      </button>
+
+      <button class="gallery-tile gallery-tall" data-category="diagnostics" data-full="assets/img/gallery-ecg.jpg" data-caption="ECG Room" data-sub="Precision diagnostics, calm setting">
+        <img src="assets/img/gallery-ecg.jpg" alt="Technician preparing a patient for an ECG test at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">ECG Room<em>Precision diagnostics, calm setting</em></span>
+      </button>
+      <button class="gallery-tile " data-category="diagnostics" data-full="assets/img/gallery-echo.jpg" data-caption="ECHO Suite" data-sub="Real-time cardiac imaging">
+        <img src="assets/img/gallery-echo.jpg" alt="Dr. P. Muralidharan performing an ECHO cardiac ultrasound on a patient" loading="lazy">
+        <span class="gallery-caption">ECHO Suite<em>Real-time cardiac imaging</em></span>
+      </button>
+      <button class="gallery-tile " data-category="diagnostics" data-full="assets/img/gallery-lab.jpg" data-caption="Diagnostic Laboratory" data-sub="Same-day, quality-checked results">
+        <img src="assets/img/gallery-lab.jpg" alt="Laboratory technicians processing diagnostic blood samples" loading="lazy">
+        <span class="gallery-caption">Diagnostic Laboratory<em>Same-day, quality-checked results</em></span>
+      </button>
+      <button class="gallery-tile gallery-wide" data-category="facility" data-full="assets/img/gallery-consultation-1.jpg" data-caption="Consultation Room" data-sub="Unhurried, one-to-one attention">
+        <img src="assets/img/gallery-consultation-1.jpg" alt="Dr. P. Muralidharan seated at his consultation desk" loading="lazy">
+        <span class="gallery-caption">Consultation Room<em>Unhurried, one-to-one attention</em></span>
+      </button>
+      <button class="gallery-tile " data-category="facility" data-full="assets/img/gallery-pharmacy.jpg" data-caption="In-House Pharmacy" data-sub="Fast, accurate dispensing">
+        <img src="assets/img/gallery-pharmacy.jpg" alt="Pharmacy staff dispensing and recording medication at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">In-House Pharmacy<em>Fast, accurate dispensing</em></span>
+      </button>
+      <button class="gallery-tile " data-category="therapy" data-full="assets/img/gallery-tmt-1.jpg" data-caption="TMT / Stress Test Room" data-sub="Monitored, safe exertion testing">
+        <img src="assets/img/gallery-tmt-1.jpg" alt="Doctor and staff conducting a TMT treadmill stress test" loading="lazy">
+        <span class="gallery-caption">TMT / Stress Test Room<em>Monitored, safe exertion testing</em></span>
+      </button>
+      <button class="gallery-tile " data-category="therapy" data-full="assets/img/gallery-tmt-2.jpg" data-caption="TMT — In Progress" data-sub="Continuous monitoring throughout">
+        <img src="assets/img/gallery-tmt-2.jpg" alt="Close view of a treadmill stress test in progress with clinical staff" loading="lazy">
+        <span class="gallery-caption">TMT — In Progress<em>Continuous monitoring throughout</em></span>
+      </button>
+      <button class="gallery-tile " data-category="facility" data-full="assets/img/gallery-consultation-2.jpg" data-caption="Doctor's Cabin" data-sub="A calm space for every consultation">
+        <img src="assets/img/gallery-consultation-2.jpg" alt="A second consultation room at Dhanyaa Medical Centre" loading="lazy">
+        <span class="gallery-caption">Doctor's Cabin<em>A calm space for every consultation</em></span>
+      </button>
+      <button class="gallery-tile gallery-wide" data-category="facility" data-full="assets/img/gallery-exterior.jpg" data-caption="Our Facility" data-sub="A welcoming, purpose-built space">
+        <img src="assets/img/gallery-exterior.jpg" alt="Exterior view of the Dhanyaa Medical Centre building in Coimbatore" loading="lazy">
+        <span class="gallery-caption">Our Facility<em>A welcoming, purpose-built space</em></span>
+      </button>
     </div>
   </div>
 </section>
 
-<section class="section-pad">
-  <div class="container-xl">
-    <div class="feature-panel" data-aos="fade-up">
-      <div>
-        <p class="eyebrow">EECP Therapy</p>
-        <h2>A non-surgical way to a stronger heart.</h2>
-        <p style="opacity:0.9; margin-top:12px;">Enhanced External Counterpulsation — a non-invasive, outpatient treatment for chronic stable angina and coronary artery disease, especially for patients not suited to angioplasty or bypass surgery.</p>
-        <ul class="feature-list">
-          <li><i class="fa-solid fa-circle-check"></i> Improves blood flow and builds natural collateral circulation</li>
-          <li><i class="fa-solid fa-circle-check"></i> Reduces frequency and severity of angina</li>
-          <li><i class="fa-solid fa-circle-check"></i> Improves exercise tolerance and quality of life</li>
-        </ul>
-        <a href="diagnostics.html" class="btn-outline-pill">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="feature-plan">
-        <p class="eyebrow" style="margin-bottom:16px;">Typical course</p>
-        <div class="big">35 sessions</div>
-        <p style="opacity:0.9; margin:6px 0 20px;">One hour per session, five days a week, over about seven weeks.</p>
-      </div>
+<div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery preview"><i class="fa-solid fa-xmark"></i></button>
+  <div class="lightbox-panel">
+    <img id="lightboxImg" src="" alt="" class="lightbox-photo">
+    <div class="lightbox-caption-bar">
+      <h3 id="lightboxCaption">Facility Preview</h3>
+      <p id="lightboxSub" style="color:rgba(255,255,255,0.7); font-size:0.9rem; margin:0;"></p>
     </div>
   </div>
-</section>
-
-<!-- Health Packages — ticket-stub layout, deliberately not a pricing card grid -->
-<section class="section-pad tint pkg-section">
-  <div class="container-xl">
-    <div class="section-head" data-aos="fade-up">
-      <p class="eyebrow" style="justify-content:center;">Preventive checkups</p>
-      <h2>Health packages for every stage of prevention.</h2>
-    </div>
-
-    <div class="pkg-grid" data-aos="fade-up">
-
-      <!-- Package 1 -->
-      <div class="pkg-card" data-accent="heart">
-        <div class="pkg-bar"></div>
-        <div class="pkg-body">
-          <span class="pkg-tag">Foundational</span>
-          <h3 class="pkg-title">Basic Health Package</h3>
-          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">1,199</span></div>
-          <p class="pkg-price-note">One-time checkup</p>
-          <div class="pkg-divider"></div>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Blood Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> CBC — WBC, RBC, Hb, Platelet Count, PCV</li>
-              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine</li>
-              <li><i class="fa-solid fa-check"></i> RBS (Random Blood Sugar)</li>
-              <li><i class="fa-solid fa-check"></i> Total Cholesterol</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Cardiac Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> ECG</li>
-              <li><i class="fa-solid fa-check"></i> Echo Screening</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group" style="margin-bottom:0;">
-            <p class="pkg-group-label">Consultation</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> Doctor Consultation Included</li>
-            </ul>
-          </div>
-
-        <!-- <div class="pkg-cta">
-            <button class="btn-primary-pill js-open-appointment" type="button">Book your appointment</button>
-          </div> -->
-        </div>
-      </div>
-
-      <!-- Package 2 — featured -->
-      <div class="pkg-card pkg-featured" data-accent="diabetic">
-        <span class="pkg-badge">Most chosen</span>
-        <div class="pkg-bar"></div>
-        <div class="pkg-body">
-          <span class="pkg-tag">Comprehensive</span>
-          <h3 class="pkg-title">Complete Heart &amp; Diabetic Panel</h3>
-          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">2,299</span></div>
-          <p class="pkg-price-note">One-time checkup</p>
-          <div class="pkg-divider"></div>
-
-          <p style="display:flex; align-items:flex-start; gap:8px; font-size:0.85rem; font-weight:700; color:#0B5E5E; background:rgba(11,94,94,0.07); padding:10px 12px; border-radius:10px; margin:0 0 18px;">
-            <i class="fa-solid fa-layer-group" style="margin-top:3px; flex-shrink:0;"></i>
-            Everything in the Basic Health Package, plus:
-          </p>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Blood Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> CBC (Complete Blood Count)</li>
-              <li><i class="fa-solid fa-check"></i> Glucose Profile — FBS &amp; PPBS</li>
-              <li><i class="fa-solid fa-check"></i> Lipid Profile — Cholesterol, HDL, LDL, VLDL</li>
-              <li><i class="fa-solid fa-check"></i> TSH (Thyroid Stimulating Hormone)</li>
-              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine, Uric Acid</li>
-              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group" style="margin-bottom:0;">
-            <p class="pkg-group-label">Cardiac Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> ECG</li>
-              <li><i class="fa-solid fa-check"></i> Complete Diagnostic Echocardiogram</li>
-            </ul>
-          </div>
-
-         <!--  <div class="pkg-cta">
-            <button class="btn-primary-pill js-open-appointment" type="button">Book your appointment</button>
-          </div> -->
-        </div>
-      </div>
-
-      <!-- Package 3 -->
-      <div class="pkg-card" data-accent="full">
-        <div class="pkg-bar"></div>
-        <div class="pkg-body">
-          <span class="pkg-tag">Executive</span>
-          <h3 class="pkg-title">Executive Health Check-Up</h3>
-          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">3,499</span></div>
-          <p class="pkg-price-note">One-time checkup</p>
-          <div class="pkg-divider"></div>
-
-          <p style="display:flex; align-items:flex-start; gap:8px; font-size:0.85rem; font-weight:700; color:#A8433D; background:rgba(168,67,61,0.07); padding:10px 12px; border-radius:10px; margin:0 0 18px;">
-            <i class="fa-solid fa-layer-group" style="margin-top:3px; flex-shrink:0;"></i>
-            Everything in the Basic Health Package and Complete Heart &amp; Diabetic Panel, plus:
-          </p>
-
-          <div class="pkg-group">
-            <p class="pkg-group-label">Blood Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> Liver Function Test — Total Panel (Bilirubin, ALT, Albumin, GGT, PT Ratio, APTT)</li>
-              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
-            </ul>
-          </div>
-
-          <div class="pkg-group" style="margin-bottom:0;">
-            <p class="pkg-group-label">Cardiac Tests</p>
-            <ul class="pkg-list">
-              <li><i class="fa-solid fa-check"></i> ECG</li>
-              <li><i class="fa-solid fa-check"></i> ECHO</li>
-              <li><i class="fa-solid fa-check"></i> TMT (Treadmill Stress Test)</li>
-            </ul>
-          </div>
-
-        <!-- <div class="pkg-cta">
-            <button class="btn-primary-pill js-open-appointment" type="button">Book your appointment</button>
-          </div> -->
-        </div>
-      </div>
-
-    </div>
-
-    <p class="text-center" style="margin-top:32px; font-size:0.85rem; color:#8a96a3;" data-aos="fade-up">
-      Prices are in Indian Rupees (&#8377;) and subject to change. Call the centre to confirm current rates.
-    </p>
-  </div>
-</section>
+</div>
 
 <footer>
   <div class="container-xl">

@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnostics Explained | ECG, ECHO, TMT, EECP, Lab — Dhanyaa Medical Centre</title>
-<meta name="description" content="A clear guide to what each diagnostic test involves — ECG, ECHO, TMT, EECP therapy and lab panels — including duration, preparation and what each test detects.">
-<link rel="canonical" href="https://www.dhanyaamedicalcentre.com/diagnostics.html">
+<title>Services | ECG, ECHO, TMT, EECP & Diagnostic Lab — Dhanyaa Medical Centre</title>
+<meta name="description" content="Explore Dhanyaa Medical Centre's cardiac and diabetic services: ECG, ECHO, TMT, EECP therapy, diagnostic lab, diabetic care and integrated heart-diabetic treatment plans in Coimbatore.">
+<link rel="canonical" href="https://www.dhanyaamedicalcentre.com/services.html">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -17,12 +17,155 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.1/swiper-bundle.min.css">
 <link rel="stylesheet" href="assets/style.css">
 
+  <style>
+    .pkg-section .section-head { margin-bottom: 48px; }
+
+    .pkg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+    @media (max-width: 900px) {
+      .pkg-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    }
+
+    .pkg-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid rgba(10,61,110,0.08);
+      box-shadow: 0 2px 10px rgba(10,61,110,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform .25s ease, box-shadow .25s ease;
+      position: relative;
+    }
+    .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 18px 34px rgba(10,61,110,0.12); }
+
+    .pkg-card[data-accent="heart"]  .pkg-bar { background: linear-gradient(90deg,#0a3d6e,#1a6bb5); }
+    .pkg-card[data-accent="diabetic"] .pkg-bar { background: linear-gradient(90deg,#0B5E5E,#158f8f); }
+    .pkg-card[data-accent="full"]   .pkg-bar { background: linear-gradient(90deg,#A8433D,#c85c50); }
+    .pkg-bar { height: 6px; width: 100%; }
+
+    /* Middle package called out as the balanced/recommended pick */
+    .pkg-card.pkg-featured {
+      border-color: rgba(11,94,94,0.35);
+      box-shadow: 0 10px 30px rgba(11,94,94,0.14);
+      transform: translateY(-10px);
+    }
+    .pkg-card.pkg-featured:hover { transform: translateY(-16px); }
+    @media (max-width: 900px) {
+      .pkg-card.pkg-featured { transform: none; }
+      .pkg-card.pkg-featured:hover { transform: translateY(-6px); }
+    }
+
+    .pkg-badge {
+      position: absolute;
+      top: 18px; right: 18px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0B5E5E;
+      background: rgba(11,94,94,0.08);
+      padding: 5px 10px;
+      border-radius: 999px;
+    }
+
+    .pkg-body { padding: 30px 28px 28px; display: flex; flex-direction: column; flex: 1; }
+
+    .pkg-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6b7a8d;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .pkg-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.32rem;
+      color: #0a3d6e;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      min-height: 66px;
+    }
+
+    .pkg-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .pkg-currency {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1.1rem;
+      color: #0a3d6e;
+      opacity: 0.7;
+    }
+    .pkg-price {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 2.6rem;
+      color: #0a3d6e;
+      line-height: 1;
+    }
+    .pkg-price-note {
+      font-size: 0.82rem;
+      color: #8a96a3;
+      margin-bottom: 24px;
+    }
+
+    .pkg-divider { height: 1px; background: rgba(10,61,110,0.08); margin: 0 0 22px; }
+
+    .pkg-group { margin-bottom: 18px; }
+    .pkg-group-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #0B5E5E;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .pkg-list { list-style: none; padding: 0; margin: 0; }
+    .pkg-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.9rem;
+      color: #3d4a58;
+      line-height: 1.45;
+      margin-bottom: 9px;
+    }
+    .pkg-list li i {
+      color: #0B5E5E;
+      font-size: 0.78rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .pkg-cta {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+    .pkg-cta .btn-primary-pill,
+    .pkg-cta .btn-outline-pill {
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Diagnostics at Dhanyaa Medical Centre",
-  "url": "https://www.dhanyaamedicalcentre.com/diagnostics.html"
+  "name": "Services at Dhanyaa Medical Centre",
+  "about": ["Cardiology", "Endocrinology", "Diagnostic Imaging"],
+  "url": "https://www.dhanyaamedicalcentre.com/services.html"
 }
 </script>
 </head>
@@ -57,8 +200,8 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="diagnostics.html" class="active">Diagnostics</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="diagnostics.html">Diagnostics</a></li>
         <li><a href="doctors.html">Doctors</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -79,8 +222,8 @@
   <ul>
     <li><a href="index.html" data-nav-close>Home</a></li>
         <li><a href="about.html" data-nav-close>About</a></li>
-        <li><a href="services.html" data-nav-close>Services</a></li>
-        <li><a href="diagnostics.html" class="active" data-nav-close>Diagnostics</a></li>
+        <li><a href="services.html" class="active" data-nav-close>Services</a></li>
+        <li><a href="diagnostics.html" data-nav-close>Diagnostics</a></li>
         <li><a href="doctors.html" data-nav-close>Doctors</a></li>
         <li><a href="gallery.html" data-nav-close>Gallery</a></li>
         <li><a href="blog.html" data-nav-close>Blog</a></li>
@@ -92,133 +235,272 @@
 </div>
 
 
-<section class="page-hero hero-tint-diagnostics">
+<section class="page-hero hero-tint-services">
   <div class="container-xl page-hero-content">
-    <p class="eyebrow">Deep dive</p>
-    <h1>Every diagnostic test, explained clearly.</h1>
-    <p class="lead-copy">What each test is, what it detects, how long it takes, and how to prepare — no guesswork before your visit.</p>
-    <div class="breadcrumb-row"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Diagnostics</span></div>
+    <p class="eyebrow">What we offer</p>
+    <h1>Diagnostics and treatment, built around you.</h1>
+    <p class="lead-copy">From a 10-minute ECG to a full 35-session EECP course, every service is designed for accurate results and meaningful next steps.</p>
+    <div class="breadcrumb-row"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Services</span></div>
   </div>
 </section>
 
 <section class="section-pad">
   <div class="container-xl">
-    <div class="diag-accordion" data-aos="fade-up">
-      
-      <div class="diag-item is-open">
-        <button class="diag-trigger">
-          <span class="diag-num">01</span>
-          <span class="diag-icon"><i class="fa-solid fa-wave-square"></i></span>
-          <h3>ECG — Electrocardiogram</h3>
-          <i class="fa-solid fa-chevron-down diag-chevron"></i>
-        </button>
-        <div class="diag-panel"><div class="diag-panel-inner">
-          <div class="diag-meta"><strong>What it is</strong><p>A simple, painless test that records the heart's electrical signals using small electrodes on your chest, arms and legs.</p></div>
-          <div class="diag-meta"><strong>What it detects</strong><p>Irregular heart rhythms, signs of a past or ongoing heart attack, heart enlargement.</p></div>
-          <div class="diag-meta"><strong>Duration</strong><p>5–10 minutes.</p></div>
-          <div class="diag-meta"><strong>Preparation</strong><p>No special preparation. Avoid oil or lotion on the chest area.</p></div>
-        </div></div>
+    <div class="bento-grid">
+      <div class="bento-item bento-feature" data-aos="fade-up">
+        <i class="fa-solid fa-shield-heart bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <span class="bento-tag">Most requested</span>
+        <h3>Integrated Heart-Diabetic Plans</h3>
+        <p>A single, coordinated workup covering both cardiac and diabetic markers — reassessed regularly with your physician.</p>
+        <a href="appointment.html" class="bento-link">Start a plan <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="diag-item">
-        <button class="diag-trigger">
-          <span class="diag-num">02</span>
-          <span class="diag-icon"><i class="fa-solid fa-heart-circle-bolt"></i></span>
-          <h3>ECHO — Echocardiogram</h3>
-          <i class="fa-solid fa-chevron-down diag-chevron"></i>
-        </button>
-        <div class="diag-panel"><div class="diag-panel-inner">
-          <div class="diag-meta"><strong>What it is</strong><p>An ultrasound-based imaging test creating real-time images of the heart's chambers, valves and major vessels.</p></div>
-          <div class="diag-meta"><strong>What it detects</strong><p>Valve disorders, heart failure, congenital defects, blood clots, pumping efficiency.</p></div>
-          <div class="diag-meta"><strong>Duration</strong><p>30–45 minutes.</p></div>
-          <div class="diag-meta"><strong>Preparation</strong><p>No fasting required; wear comfortable clothing.</p></div>
-        </div></div>
+
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="40"><i class="fa-solid fa-wave-square bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-wave-square"></i></div><h3>ECG</h3><p>Detects irregular rhythms and past heart attacks — painless, 5–10 minutes.</p><div class="svc-meta"><span>No fasting</span><span>5–10 min</span></div></div>
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="80"><i class="fa-solid fa-heart-circle-bolt bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-heart-circle-bolt"></i></div><h3>ECHO</h3><p>Ultrasound imaging of the heart's chambers, valves and vessels.</p><div class="svc-meta"><span>30–45 min</span></div></div>
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="120"><i class="fa-solid fa-person-running bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-person-running"></i></div><h3>TMT</h3><p>Treadmill stress test revealing coronary blockages and fitness.</p><div class="svc-meta"><span>30–45 min</span></div></div>
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="160">
+        <i class="fa-solid fa-heart-pulse bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <h3>Holter Monitoring</h3>
+        <p>Continuously records your heart's rhythm over 24–48 hours to catch irregular beats.</p>
+        <div class="svc-meta"><span>24–48 hrs</span><span>Worn at home</span></div>
       </div>
-      <div class="diag-item">
-        <button class="diag-trigger">
-          <span class="diag-num">03</span>
-          <span class="diag-icon"><i class="fa-solid fa-person-running"></i></span>
-          <h3>TMT — Treadmill / Stress Test</h3>
-          <i class="fa-solid fa-chevron-down diag-chevron"></i>
-        </button>
-        <div class="diag-panel"><div class="diag-panel-inner">
-          <div class="diag-meta"><strong>What it is</strong><p>Monitors heart performance while you walk on a treadmill at increasing difficulty, simulating exertion.</p></div>
-          <div class="diag-meta"><strong>What it detects</strong><p>Coronary artery blockages, exercise-induced arrhythmias, cardiovascular fitness.</p></div>
-          <div class="diag-meta"><strong>Duration</strong><p>30–45 minutes including recovery monitoring.</p></div>
-          <div class="diag-meta"><strong>Preparation</strong><p>Avoid heavy meals, caffeine and smoking 2–3 hours prior.</p></div>
-        </div></div>
+
+
+
+      <!-- Cardiac Care Management & Rehabilitation — must render AFTER Diabetic Care / Foot Ulcer Care -->
+      <div class="bento-item bento-wide" data-aos="fade-up" data-aos-delay="280">
+        <i class="fa-solid fa-heart-circle-check bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-heart-circle-check"></i></div>
+        <h3>Cardiac Care Management &amp; Rehabilitation</h3>
+        <p>Structured, ongoing management and counselling for heart failure and related conditions — not a one-time test, but a continuing care relationship.</p>
+        <div class="svc-meta">
+          <span>Heart failure management</span>
+          <span>Coronary artery disease screening</span>
+          <span>Congenital heart disease</span>
+          <span>Valvular heart disease</span>
+        </div>
       </div>
-      <div class="diag-item">
-        <button class="diag-trigger">
-          <span class="diag-num">04</span>
-          <span class="diag-icon"><i class="fa-solid fa-heart-pulse"></i></span>
-          <h3>EECP — Enhanced External Counterpulsation</h3>
-          <i class="fa-solid fa-chevron-down diag-chevron"></i>
-        </button>
-        <div class="diag-panel"><div class="diag-panel-inner">
-          <div class="diag-meta"><strong>What it is</strong><p>Inflatable cuffs on the calves, thighs and lower body inflate and deflate in sync with your heartbeat, improving blood flow and building collateral circulation.</p></div>
-          <div class="diag-meta"><strong>What it detects</strong><p>Chronic stable angina and coronary artery disease not suited to surgery.</p></div>
-          <div class="diag-meta"><strong>Duration</strong><p>35 one-hour sessions over ~7 weeks, 5 sessions/week.</p></div>
-          <div class="diag-meta"><strong>Preparation</strong><p>Comfortable, loose clothing recommended.</p></div>
-        </div></div>
+
+      <!-- These two must render directly below TMT / Holter Monitoring -->
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-syringe bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-syringe"></i></div><h3>Diabetic Care</h3><p>Initial assessment, monitoring, lifestyle guidance and complication screening.</p><div class="svc-meta"><span>Structured follow-up</span></div></div>
+      <div class="bento-item" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-shoe-prints bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+        <h3>Foot Ulcer Care</h3>
+        <p>Specialised wound care and dressing for diabetic foot ulcers to prevent infection.</p>
+        <div class="svc-meta"><span>Infection prevention</span></div>
+      </div>      
+
+      <!-- Adult Metabolic Syndrome Screening -->
+      <div class="bento-item bento-wide" data-aos="fade-up" data-aos-delay="320">
+        <i class="fa-solid fa-gauge-high bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Adult Metabolic Syndrome Screening</h3>
+        <p>A focused screening for the cluster of risk factors — blood pressure, blood sugar, cholesterol and waist measurement — that raise heart and diabetes risk.</p>
+        <div class="svc-meta"><span>Early risk detection</span></div>
       </div>
-      <div class="diag-item">
-        <button class="diag-trigger">
-          <span class="diag-num">05</span>
-          <span class="diag-icon"><i class="fa-solid fa-flask-vial"></i></span>
-          <h3>LAB — Diagnostic Laboratory</h3>
-          <i class="fa-solid fa-chevron-down diag-chevron"></i>
-        </button>
-        <div class="diag-panel"><div class="diag-panel-inner">
-          <div class="diag-meta"><strong>What it is</strong><p>In-house lab testing across blood sugar, HbA1c, lipid profile, kidney &amp; liver function, thyroid, and routine panels.</p></div>
-          <div class="diag-meta"><strong>What it detects</strong><p>Diabetic control, cardiovascular risk factors, organ function.</p></div>
-          <div class="diag-meta"><strong>Duration</strong><p>Most reports same day.</p></div>
-          <div class="diag-meta"><strong>Preparation</strong><p>Fasting required for some panels — front desk will advise.</p></div>
-        </div></div>
+
+      <!-- Obesity Management -->
+      <div class="bento-item bento-wide" data-aos="fade-up" data-aos-delay="360">
+        <i class="fa-solid fa-weight-scale bento-ghost-icon"></i>
+        <div class="bento-icon"><i class="fa-solid fa-weight-scale"></i></div>
+        <h3>Obesity Management</h3>
+        <p>A structured, supportive approach to sustainable weight reduction — combining sleep screening with personalised dietary guidance.</p>
+        <div class="svc-meta"><span>Sleep study (rules out OSA)</span><span>Diet advice</span></div>
       </div>
-      <div class="diag-item">
-        <button class="diag-trigger">
-          <span class="diag-num">06</span>
-          <span class="diag-icon"><i class="fa-solid fa-heart-pulse"></i></span>
-          <h3>Holter Monitoring</h3>
-          <i class="fa-solid fa-chevron-down diag-chevron"></i>
-        </button>
-        <div class="diag-panel"><div class="diag-panel-inner">
-          <div class="diag-meta"><strong>What it is</strong><p>A small, portable device worn on the body that continuously records your heart's electrical activity over an extended period at home.</p></div>
-          <div class="diag-meta"><strong>What it detects</strong><p>Intermittent irregular heartbeats, palpitations and rhythm disturbances that a routine ECG can miss.</p></div>
-          <div class="diag-meta"><strong>Duration</strong><p>24–48 hours of continuous wear.</p></div>
-          <div class="diag-meta"><strong>Preparation</strong><p>No special preparation; continue normal daily activities while wearing the device.</p></div>
-        </div></div>
-      </div>
-      <div class="diag-item">
-        <button class="diag-trigger">
-          <span class="diag-num">07</span>
-          <span class="diag-icon"><i class="fa-solid fa-shoe-prints"></i></span>
-          <h3>Foot Ulcer Care</h3>
-          <i class="fa-solid fa-chevron-down diag-chevron"></i>
-        </button>
-        <div class="diag-panel"><div class="diag-panel-inner">
-          <div class="diag-meta"><strong>What it is</strong><p>Specialised wound care and dressing for diabetic foot ulcers, with regular monitoring to support healing.</p></div>
-          <div class="diag-meta"><strong>What it detects</strong><p>Early signs of infection, poor circulation, and delayed healing risk in the affected foot.</p></div>
-          <div class="diag-meta"><strong>Duration</strong><p>Ongoing, based on ulcer severity and healing progress.</p></div>
-          <div class="diag-meta"><strong>Preparation</strong><p>None required; bring previous dressing or wound-care records if available.</p></div>
-        </div></div>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top:44px;" data-aos="fade-up">
-      <button class="btn-primary-pill js-open-appointment" type="button"><i class="fa-regular fa-calendar-check"></i> Book a Diagnostic Test</button>
+
+      <div class="bento-item bento-wide" data-aos="fade-up" data-aos-delay="400"><i class="fa-solid fa-flask-vial bento-ghost-icon"></i><div class="bento-icon"><i class="fa-solid fa-flask-vial"></i></div><h3>Diagnostic Laboratory</h3><p>Blood sugar, HbA1c, lipid profile, kidney &amp; liver function, thyroid and routine panels — same-day reports.</p><div class="svc-meta"><span>Same-day reports</span></div></div>
     </div>
   </div>
 </section>
 
-<section class="section-pad tint">
+
+
+<section class="section-pad">
   <div class="container-xl">
-    <div class="section-head" data-aos="fade-up"><p class="eyebrow" style="justify-content:center;">Diabetic care pathway</p><h2>A structured path, not a single visit.</h2></div>
-    <div class="pathway-row" data-aos="fade-up">
-      <div class="pathway-step"><span class="idx">STEP 01</span><div class="pathway-circle"><i class="fa-solid fa-clipboard-list"></i></div><h4>Initial Assessment</h4><p>Blood sugar, HbA1c &amp; risk factors evaluated.</p></div>
-      <div class="pathway-step"><span class="idx">STEP 02</span><div class="pathway-circle"><i class="fa-solid fa-calendar-check"></i></div><h4>Regular Monitoring</h4><p>Scheduled follow-ups track control over time.</p></div>
-      <div class="pathway-step"><span class="idx">STEP 03</span><div class="pathway-circle"><i class="fa-solid fa-leaf"></i></div><h4>Lifestyle Guidance</h4><p>Practical diet and activity advice.</p></div>
-      <div class="pathway-step"><span class="idx">STEP 04</span><div class="pathway-circle"><i class="fa-solid fa-shield-heart"></i></div><h4>Complication Screening</h4><p>Periodic checks for heart, kidney &amp; circulation risk.</p></div>
+    <div class="feature-panel" data-aos="fade-up">
+      <div>
+        <p class="eyebrow">EECP Therapy</p>
+        <h2>A non-surgical way to a stronger heart.</h2>
+        <p style="opacity:0.9; margin-top:12px;">Enhanced External Counterpulsation — a non-invasive, outpatient treatment for chronic stable angina and coronary artery disease, especially for patients not suited to angioplasty or bypass surgery.</p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-circle-check"></i> Improves blood flow and builds natural collateral circulation</li>
+          <li><i class="fa-solid fa-circle-check"></i> Reduces frequency and severity of angina</li>
+          <li><i class="fa-solid fa-circle-check"></i> Improves exercise tolerance and quality of life</li>
+        </ul>
+        <a href="diagnostics.html" class="btn-outline-pill">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="feature-plan">
+        <p class="eyebrow" style="margin-bottom:16px;">Typical course</p>
+        <div class="big">35 sessions</div>
+        <p style="opacity:0.9; margin:6px 0 20px;">One hour per session, five days a week, over about seven weeks.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container-xl">
+    <div class="feature-panel" data-aos="fade-up">
+      <div>
+        <p class="eyebrow">EECP Therapy</p>
+        <h2>A non-surgical way to a stronger heart.</h2>
+        <p style="opacity:0.9; margin-top:12px;">Enhanced External Counterpulsation — a non-invasive, outpatient treatment for chronic stable angina and coronary artery disease, especially for patients not suited to angioplasty or bypass surgery.</p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-circle-check"></i> Improves blood flow and builds natural collateral circulation</li>
+          <li><i class="fa-solid fa-circle-check"></i> Reduces frequency and severity of angina</li>
+          <li><i class="fa-solid fa-circle-check"></i> Improves exercise tolerance and quality of life</li>
+        </ul>
+        <a href="diagnostics.html" class="btn-outline-pill">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="feature-plan">
+        <p class="eyebrow" style="margin-bottom:16px;">Typical course</p>
+        <div class="big">35 sessions</div>
+        <p style="opacity:0.9; margin:6px 0 20px;">One hour per session, five days a week, over about seven weeks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Health Packages — ticket-stub layout, deliberately not a pricing card grid -->
+<section class="section-pad tint pkg-section">
+  <div class="container-xl">
+    <div class="section-head" data-aos="fade-up">
+      <p class="eyebrow" style="justify-content:center;">Preventive checkups</p>
+      <h2>Health packages for every stage of prevention.</h2>
+    </div>
+
+    <div class="pkg-grid" data-aos="fade-up">
+
+      <!-- Package 1 -->
+      <div class="pkg-card" data-accent="heart">
+        <div class="pkg-bar"></div>
+        <div class="pkg-body">
+          <span class="pkg-tag">Foundational</span>
+          <h3 class="pkg-title">Basic Health Package</h3>
+          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">1,199</span></div>
+          <p class="pkg-price-note">One-time checkup</p>
+          <div class="pkg-divider"></div>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Blood Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> CBC — WBC, RBC, Hb, Platelet Count, PCV</li>
+              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine</li>
+              <li><i class="fa-solid fa-check"></i> RBS (Random Blood Sugar)</li>
+              <li><i class="fa-solid fa-check"></i> Total Cholesterol</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Cardiac Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> ECG</li>
+              <li><i class="fa-solid fa-check"></i> Echo Screening</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group" style="margin-bottom:0;">
+            <p class="pkg-group-label">Consultation</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> Doctor Consultation Included</li>
+            </ul>
+          </div>
+
+        <!-- <div class="pkg-cta">
+            <button class="btn-primary-pill js-open-appointment" type="button">Book your appointment</button>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- Package 2 — featured -->
+      <div class="pkg-card pkg-featured" data-accent="diabetic">
+        <span class="pkg-badge">Most chosen</span>
+        <div class="pkg-bar"></div>
+        <div class="pkg-body">
+          <span class="pkg-tag">Comprehensive</span>
+          <h3 class="pkg-title">Complete Heart &amp; Diabetic Panel</h3>
+          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">2,299</span></div>
+          <p class="pkg-price-note">One-time checkup</p>
+          <div class="pkg-divider"></div>
+
+          <p style="display:flex; align-items:flex-start; gap:8px; font-size:0.85rem; font-weight:700; color:#0B5E5E; background:rgba(11,94,94,0.07); padding:10px 12px; border-radius:10px; margin:0 0 18px;">
+            <i class="fa-solid fa-layer-group" style="margin-top:3px; flex-shrink:0;"></i>
+            Everything in the Basic Health Package, plus:
+          </p>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Blood Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> CBC (Complete Blood Count)</li>
+              <li><i class="fa-solid fa-check"></i> Glucose Profile — FBS &amp; PPBS</li>
+              <li><i class="fa-solid fa-check"></i> Lipid Profile — Cholesterol, HDL, LDL, VLDL</li>
+              <li><i class="fa-solid fa-check"></i> TSH (Thyroid Stimulating Hormone)</li>
+              <li><i class="fa-solid fa-check"></i> Kidney Function Test — Urea, Creatinine, Uric Acid</li>
+              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group" style="margin-bottom:0;">
+            <p class="pkg-group-label">Cardiac Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> ECG</li>
+              <li><i class="fa-solid fa-check"></i> Complete Diagnostic Echocardiogram</li>
+            </ul>
+          </div>
+
+         <!--  <div class="pkg-cta">
+            <button class="btn-primary-pill js-open-appointment" type="button">Book your appointment</button>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="pkg-card" data-accent="full">
+        <div class="pkg-bar"></div>
+        <div class="pkg-body">
+          <span class="pkg-tag">Executive</span>
+          <h3 class="pkg-title">Executive Health Check-Up</h3>
+          <div class="pkg-price-row"><span class="pkg-currency">&#8377;</span><span class="pkg-price">3,499</span></div>
+          <p class="pkg-price-note">One-time checkup</p>
+          <div class="pkg-divider"></div>
+
+          <p style="display:flex; align-items:flex-start; gap:8px; font-size:0.85rem; font-weight:700; color:#A8433D; background:rgba(168,67,61,0.07); padding:10px 12px; border-radius:10px; margin:0 0 18px;">
+            <i class="fa-solid fa-layer-group" style="margin-top:3px; flex-shrink:0;"></i>
+            Everything in the Basic Health Package and Complete Heart &amp; Diabetic Panel, plus:
+          </p>
+
+          <div class="pkg-group">
+            <p class="pkg-group-label">Blood Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> Liver Function Test — Total Panel (Bilirubin, ALT, Albumin, GGT, PT Ratio, APTT)</li>
+              <li><i class="fa-solid fa-check"></i> Complete Urine Analysis</li>
+            </ul>
+          </div>
+
+          <div class="pkg-group" style="margin-bottom:0;">
+            <p class="pkg-group-label">Cardiac Tests</p>
+            <ul class="pkg-list">
+              <li><i class="fa-solid fa-check"></i> ECG</li>
+              <li><i class="fa-solid fa-check"></i> ECHO</li>
+              <li><i class="fa-solid fa-check"></i> TMT (Treadmill Stress Test)</li>
+            </ul>
+          </div>
+
+        <!-- <div class="pkg-cta">
+            <button class="btn-primary-pill js-open-appointment" type="button">Book your appointment</button>
+          </div> -->
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center" style="margin-top:32px; font-size:0.85rem; color:#8a96a3;" data-aos="fade-up">
+      Prices are in Indian Rupees (&#8377;) and subject to change. Call the centre to confirm current rates.
+    </p>
   </div>
 </section>
 
